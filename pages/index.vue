@@ -71,6 +71,7 @@
 
   .subtitle-nuxt {
     font-size:16px;
+    padding:10px;
   }
 }
 </style>

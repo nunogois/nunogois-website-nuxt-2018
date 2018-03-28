@@ -16,12 +16,4 @@
   align-items: center;
   text-align: center;
 }
-
-.title-nuxt {
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  letter-spacing: 1px;
-  border-bottom:1px solid #333;
-}
 </style>

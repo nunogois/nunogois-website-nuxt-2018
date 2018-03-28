@@ -5,6 +5,8 @@
             <img src="~/assets/images/stonedesign.png" alt="Stone Design" class="logo">
         </router-link> -->
 
+        <span class="navbar-title" :class="{'is-invisible': !burger_open, 'animated fadeIn': burger_open}">NUNO GÓIS</span>
+
         <div class="navbar-burger burger" data-target="navbar_menu" @click="burger_toggle" :class="{'is-active': burger_open}">
             <span></span>
             <span></span>
@@ -26,6 +28,11 @@
 </template>
 
 <style>
+.navbar-title {
+    color:#989898;
+    padding:15px;
+}
+
 .navbar-item {
     color: #989898;
     -webkit-transition: 0.5s; /* Safari */
@@ -40,6 +47,17 @@ a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link
 }
 .navbar {
     background-color: #1a1a1a;
+}
+
+.nuxt-link-exact-active {
+    color:#d8d8d8;
+}
+
+@media screen and (max-width: 1023px) {
+    .navbar-menu {
+        background-color: #1a1a1a;
+        color: #989898;
+    }
 }
 </style>
 

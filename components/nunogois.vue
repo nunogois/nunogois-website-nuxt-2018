@@ -519,4 +519,10 @@ export default {
   transform: translate(-50%, -50%);
 } */
 
+@media only screen and (max-width: 768px) {
+  .nunogois-container {
+    font-size:0.8em;
+  }
+}
+
 </style>
