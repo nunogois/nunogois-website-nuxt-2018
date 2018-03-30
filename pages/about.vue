@@ -63,7 +63,7 @@ import item from '~/components/item.vue'
                     icon: 'user',
                     title: 'Personality',
                     color: '#d6935c',
-                    content: "Besides creating stuff, I love music, movies, TV series, videogames, reading and writing. If you wish to know more about my personality and personality tests is your thing, I'm considered an INTJ according to MBTI."
+                    content: "Besides creating stuff, I love music, movies, TV series, videogames, reading and writing. If you wish to know more about my personality and you're interested in personality tests, I'm considered an INTJ according to MBTI."
                 }
             ]
     }
