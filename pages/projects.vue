@@ -1,31 +1,25 @@
 <template>
   <div>
-    
     <h1 class="page_title">// PROJECTS</h1>
-
-    <!-- <section class="container-nuxt"> -->
-
-        <div class="container">        
-            <div class="columns is-multiline">                
-                <item v-for="item in items" :key="item.id" :icon="item.icon" :title="item.title" :color="item.color" :content="item.content"/>
-            </div>
+    <div class="container">        
+        <div class="columns is-multiline">                
+            <image-item v-for="item in items" :key="item.id" :image="item.image" :title="item.title" :color="item.color" :content="item.content"/>
         </div>
-
-    <!-- </section> -->
+    </div>
   </div>
 </template>
 
 <script>
-import item from '~/components/item.vue'
+import imageItem from '~/components/imageItem.vue'
 
-  export default {
+export default {
     data () {
         return {
             items: []
         }
     },
     components: {
-      item
+        imageItem
     },
     computed: {
         age() {
@@ -46,36 +40,26 @@ import item from '~/components/item.vue'
         this.items = [ 
                 {
                     id: 0,
-                    icon: 'id-card',
-                    title: 'Bio',
-                    color: '#5ca9d6',
-                    content: "I am a " + this.age + " years old full-stack developer from Portugal. I love my job and have over 5 years of professional experience. I'm currently working for <a href=\"https://www.iqa.pt\">IQA</a>, developing <a href=\"https://www.myagir.com\">AGIR</a> and all of its related projects."
+                    image: 'img/agir.png',
+                    title: 'AGIR',
+                    color: 'rgb(0, 168, 253)',
+                    content: "<a href=\"https://www.myagir.com\">AGIR</a> ® (© 2018 | <a href=\"https://www.iqa.pt\">IQA - Sistemas de Gestão da Qualidade</a>) is a Quality Management Software (QMS), Process Management (BPM) and Document control software. I've been working on the platform since 2011: From ASP.NET, SQL and Web API to .NET WinForms or Java, from Windows Services to Office Add-Ins. My favourite part of the platform is its flexibility - features like an intuitive Form Designer and a custom JavaScript framework mean that it is able to do pretty much anything you set your mind to."
                 },
                 {
                     id: 1,
-                    icon: 'lightbulb',
-                    title: 'Mindset',
-                    color: '#ced65c',
-                    content: "I absolutely love putting my skills to the test. I'm a bit of a creative and perfectionist individual who is addicted to new challenges, the feeling of evolution and self-improvement. There is always something new to learn and ways to improve."
+                    image: 'img/nunogois_old.png',
+                    title: 'Nuno Góis (old)',
+                    color: 'rgb(226, 226, 226)',
+                    content: "My old website was a single page that tried to list the most relevant info in a minimalist way. It was also a way to try Node.js in a personal way. I was pretty happy with the results however there was room for improvement: The design could be a bit more attractive, the website could be a lot faster, it didn't use SSL with my domain and I could organize things a bit better fitting more content. You can still check it out by clicking <a href=\"http://old.nunogois.com\">here</a>."
                 },
                 {
                     id: 2,
-                    icon: 'user',
-                    title: 'Personality',
-                    color: '#d6935c',
-                    content: "Besides creating stuff, I love music, movies, TV series, videogames, reading and writing. If you wish to know more about my personality and personality tests is your thing, I'm considered an INTJ according to MBTI."
+                    image: 'img/nunogois.png',
+                    title: 'Nuno Góis',
+                    color: '#5ed56e',
+                    content: "I'm very proud of my new website. It uses Nuxt.js (powered by Vue.js) as a generator of static files, replacing Bootstrap with the lighter Bulma, instead of jQuery it uses Vue.js and native JavaScript, providing a blazing fast SPA experience for its front-end. For the back-end, I've used Node.js as an extremely simple API. I think its design is a step-up from the previous version and I was able to fit in a bit more content in an organized way."
                 }
             ]
     }
-  }
-</script>
-
-<style>
-.container-nuxt {
-  min-height: calc(100vh - 120px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
-</style>
+</script>

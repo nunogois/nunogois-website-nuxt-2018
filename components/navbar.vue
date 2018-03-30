@@ -37,6 +37,7 @@
     color: #989898;
     -webkit-transition: 0.5s; /* Safari */
     transition: 0.5s;
+    font-weight:300;
 }
 .navbar-item .logo {
     max-height:inherit;

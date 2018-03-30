@@ -1,17 +1,11 @@
 <template>
-  <div>
-    
+  <div>    
     <h1 class="page_title">// ABOUT ME</h1>
-
-    <!-- <section class="container-nuxt"> -->
-
-        <div class="container">        
-            <div class="columns is-multiline">                
-                <item v-for="item in items" :key="item.id" :icon="item.icon" :title="item.title" :color="item.color" :content="item.content"/>
-            </div>
+    <div class="container">        
+        <div class="columns is-multiline">                
+            <item v-for="item in items" :key="item.id" :icon="item.icon" :title="item.title" :color="item.color" :content="item.content"/>
         </div>
-
-    <!-- </section> -->
+    </div>
   </div>
 </template>
 
@@ -69,13 +63,3 @@ import item from '~/components/item.vue'
     }
   }
 </script>
-
-<style>
-.container-nuxt {
-  min-height: calc(100vh - 120px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-</style>
