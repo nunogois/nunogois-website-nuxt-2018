@@ -56,4 +56,11 @@ body {
 .subtitle {
   margin-top: 0 !important;
 }
+
+a {
+  font-weight:bold;
+}
+a:hover {
+  color:#0061ff;
+}
 </style>

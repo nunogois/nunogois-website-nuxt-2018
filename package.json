@@ -19,7 +19,12 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.5",
+    "@fortawesome/fontawesome-free-brands": "^5.0.9",
+    "@fortawesome/fontawesome-free-regular": "^5.0.9",
+    "@fortawesome/vue-fontawesome": "0.0.22",
     "@nuxtjs/bulma": "^1.1.0",
+    "npm": "^5.8.0",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {

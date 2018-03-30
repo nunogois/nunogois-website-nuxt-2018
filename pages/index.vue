@@ -7,7 +7,7 @@
           <nunogois/>
         </h1>
         <h2 class="subtitle-nuxt animated slideInUp">
-          Software Developer
+          Full-Stack Developer
         </h2>
         <!-- <div class="links-nuxt">
           <router-link :to="'/about'" class="button is-dark is-medium">About Me</router-link>
