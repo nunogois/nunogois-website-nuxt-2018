@@ -43,7 +43,7 @@ import item from '~/components/item.vue'
                     icon: 'id-card',
                     title: 'Bio',
                     color: '#5ca9d6',
-                    content: "I am a " + this.age + " years old full-stack developer from Portugal. I love my job and have over 5 years of professional experience. I'm currently working for <a href=\"https://www.iqa.pt\">IQA</a>, developing <a href=\"https://www.myagir.com\">AGIR</a> and all of its related projects."
+                    content: "I am a " + this.age + " years old full-stack developer from Portugal. I love my job and have over 5 years of professional experience. I'm currently working for <a href=\"https://www.iqa.pt\" target=\"_blank\">IQA</a>, developing <a href=\"https://www.myagir.com\" target=\"_blank\">AGIR</a> and all of its related projects."
                 },
                 {
                     id: 1,

@@ -2,7 +2,7 @@
   <div>
     <section class="container-nuxt">
       <div>
-        <h1 class="title-nuxt">
+        <h1 class="title-nuxt animated slideInDown">
           <nunogois/>
         </h1>
         <h2 class="subtitle-nuxt animated slideInUp">

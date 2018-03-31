@@ -1,5 +1,5 @@
 <template>
-  <div class="animated fadeIn">
+  <div class="animated fadeIn" v-show="loaded">
     <navbar/>
     <nuxt/>
   </div>
@@ -9,8 +9,16 @@
 import navbar from '~/components/navbar.vue'
 
 export default {
+  data () {
+    return {
+      loaded: false
+    }
+  },
   components: {
     navbar
+  },
+  mounted: function() {
+    this.loaded = true;
   }
 }
 </script>
