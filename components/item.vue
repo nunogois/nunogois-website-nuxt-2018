@@ -2,8 +2,9 @@
 <div class="column is-4">
     <div class="card animated fadeIn" v-show="loaded">
     <div class="card-image" :style="{color: color}">
-        <font-awesome-icon :icon="['far', icon]" style="font-size:56px;" />    
-    </div>
+        <font-awesome-icon :icon="[library, icon]" style="font-size:56px;" v-show="!text" />    
+        <span style="font-size:56px;" v-html="text"></span>
+    </div>    
     <div class="card-content">
         <h1 class="card-title" v-html="title" :style="{color: color}"></h1>
         <div class="content" v-html="content"></div>
@@ -14,7 +15,14 @@
 
 <script>
 export default {
-    props: ['icon', 'title', 'color', 'content'],
+    props: {
+        library: {default: 'far', type: String},
+        icon: {default: 'question-circle', type: String},
+        text: {default: '', type: String},
+        title: {type: String},
+        color: {type: String},
+        content: {type: String}
+    },
     data () {
         return {
             loaded: false
