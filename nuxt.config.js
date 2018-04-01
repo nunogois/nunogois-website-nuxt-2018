@@ -30,7 +30,9 @@ module.exports = {
     'assets/scrollbar.css'
   ],
   modules: [
-    '@nuxtjs/bulma'
+    '@nuxtjs/bulma',
+    '@nuxtjs/axios',
+    '@nuxtjs/toast'
   ],
   build: {
     /*
