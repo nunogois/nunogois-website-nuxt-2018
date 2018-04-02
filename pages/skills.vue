@@ -8,7 +8,7 @@
         <div class="columns is-multiline">                
             <item v-for="item in s_items" :key="item.id" :library="item.library" :text="item.text" :icon="item.icon" :title="item.title" :color="item.color" :content="item.content"/>
         </div>
-        <span v-show="s_items.length === 0">It seems I may not be familiar with that. Please <router-link :to="'/contact'">tell me about it</router-link> so I can research it!</span>
+        <span v-show="s_items.length === 0">It seems I may not be familiar with that. Please <router-link :to="'/contact'" id="tellmeaboutit">tell me about it</router-link> so I can research it!</span>
     </div>
   </div>
 </template>
@@ -112,7 +112,7 @@ import item from '~/components/item.vue'
                     icon: 'flask',
                     title: 'Others / Researching...',
                     color: '#2399f7',
-                    content: "Other than the skills listed here I'm always looking forward to add to my knowledge! Some of the things I'm interested in currently: Progressive Web Apps, GraphQL, Go, Python, WebAssembly, Blockchain, Phoenix (Elixir), and so on. Know of something that will interest me? <a href=\"/contact\">Tell me about it!</a>"
+                    content: "Other than the skills listed here I'm always looking forward to add to my knowledge! Some of the things I'm interested in currently: Progressive Web Apps, GraphQL, Go, Python, WebAssembly, Blockchain, Phoenix (Elixir), and many others! Know of something that will interest me? <a href=\"javascript:;\" onclick=\"document.getElementById('tellmeaboutit').click();\">Tell me about it!</a>"
                 }
             ]
         }
