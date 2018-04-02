@@ -27,7 +27,7 @@ import item from '~/components/item.vue'
                     icon: 'js-square',
                     title: 'JavaScript',
                     color: '#f7df1e',
-                    content: "In my opinion, JavaScript is the language you <i>need</i> to know in 2018. Yes, it has its weird parts, but you can do pretty much everything you think of with it and a bit of front-end knowledge (HTML, CSS). I use JSON even for non-JavaScript related projects. I've started using JavaScript mostly with jQuery as a DOM manipulator and AJAX, but now I'm using it with Node.js (npm/yarn are great!), Nuxt.js/Vue.js, NativeScript, some experiments on Electron and just plain JavaScript using some new ECMAScript cool features sometimes. TypeScript is great from what I've seen and I intend to dive deeper into it at a later stage."
+                    content: "In my opinion, JavaScript is the language you <i>need</i> to know in 2018. Yes, it has its weird parts, but you can do pretty much everything you think of with it and a bit of front-end knowledge (HTML, CSS). I use JSON even for non-JavaScript related projects. I've started using JavaScript mostly with jQuery as a DOM manipulator and AJAX, but now I'm using it with Node.js (npm/yarn are great!), Nuxt.js/Vue.js, Socket.io, NativeScript, some experiments on Electron and just plain JavaScript using some new ECMAScript cool features sometimes. TypeScript is great from what I've seen and I intend to dive deeper into it at a later stage."
                 },
                 {
                     id: 1,
@@ -42,15 +42,68 @@ import item from '~/components/item.vue'
                     icon: 'database',
                     title: 'Databases',
                     color: '#f21614',
-                    content: "Due to my .NET oriented experience, the database engine I'm most familiar with is SQL Server. I'm experienced in creating complex SQL queries, designing schemas, creating indexes, managing databases and respective users/roles, and so on. I've also used MySQL and SQLite successfully in the past, using several available connectors or developing wrappers for different programming languages. Recently I've experimented with MongoDB and loved it! Even though I consider myself efficient in this space, there's still a lot I would like to learn."
+                    content: "Due to my .NET oriented experience, the database engine I'm most familiar with is SQL Server. I'm experienced in creating complex SQL queries, scripts, indexes, designing schemas, managing databases and respective users/roles, and so on. I've also used MySQL and SQLite successfully in the past, using several available connectors or developing wrappers for different programming languages. Recently I've experimented with MongoDB and loved it! Even though I consider myself efficient in this space, there's still a lot I would like to learn."
                 },
                 {
                     id: 3,         
+                    text: 'Java',
+                    title: 'Java',
+                    color: 'rgb(225, 31, 34)',
+                    content: "Even though I'm not experienced with the most popular Java frameworks I'm familiar enough with the language that I can learn them if needed. My experience with Java involved creating desktop applications and dabbling around with Android and frameworks like LibGDX."
+                },
+                {
+                    id: 4,         
+                    text: 'C/C++',
+                    title: 'C and C++',
+                    color: '#72aeec',
+                    content: "I've grouped these 2 languages because my experience with both is very similar. I've used them both extensively but never for big projects, only for simple tools, plugins and applications."
+                },
+                {
+                    id: 5,                             
+                    icon: 'image',
+                    title: 'Design',
+                    color: '#32ffd1',
+                    content: "I'm mostly experienced with Adobe Photoshop. I'm able to accomplish simple tasks such as using custom fonts and brushes, using blending options, the Content Aware feature, creating simple renders, creating simple GIFs and so on. I'm looking into vectors and SVG animation at the moment."
+                },
+                {
+                    id: 6,         
                     library: 'fab',
                     icon: 'css3-alt',
                     title: 'CSS',
-                    color: '#1a75be',
+                    color: '#2399f7',
                     content: "I'm experienced in creating intuitive, attractive and responsive designs. I'm familiar with CSS frameworks like Bootstrap and their grid systems that facilitate the process of creating a responsive layout. I'm recently leaning towards Bulma and other lightweight CSS frameworks."
+                },
+                {
+                    id: 7,         
+                    library: 'fas',
+                    icon: 'code-branch',
+                    title: 'Version Control',
+                    color: 'white',
+                    content: "I have enough knowledge in this matter to accomplish the most common tasks. I've used git in services like GitHub, Bitbucket, Bonobo Git Server, Heroku, and so on. Besides git, I have experience in hosting and using Team Foundation Server."
+                },
+                {
+                    id: 8,         
+                    library: 'fas',
+                    icon: 'server',
+                    title: 'Hosting',
+                    color: '#91ccfb',
+                    content: "I have experience with several hosting partners as well as self-hosting. My hosting experience is based on Windows but I'm looking into expanding it to other platforms. I'm familiar with hosting web applications in IIS, managing bindings, creating specific rules and installing SSL certificates."
+                },
+                {
+                    id: 9,         
+                    library: 'fas',
+                    icon: 'mobile-alt',
+                    title: 'Mobile Development',
+                    color: '#daeaa9',
+                    content: "I've explored several mobile frameworks including PhoneGap/Cordova, Xamarin, Framework7, Jasonette and NativeScript. I've ended up using NativeScript the most as I feel it offers the best solution for native apps using my know-how. For simple websites that are already responsive, I like using tools like PWABuilder."
+                },
+                {
+                    id: 10,         
+                    library: 'fas',
+                    icon: 'gamepad',
+                    title: 'Game Development',
+                    color: '#daeaa9',
+                    content: "I've explored several mobile frameworks including PhoneGap/Cordova, Xamarin, Framework7, Jasonette and NativeScript. I've ended up using NativeScript the most as I feel it offers the best solution for native apps using my know-how. For simple websites that are already responsive, I like using tools like PWABuilder."
                 }
             ]
         }
