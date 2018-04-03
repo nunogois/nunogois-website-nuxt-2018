@@ -3,7 +3,7 @@
     <div class="card animated fadeIn" v-show="loaded">
     <div class="card-image">
         <figure class="image is-128x128">
-            <img :src="image"/>
+            <img :src="image" class="animated fadeIn"/>
         </figure>
     </div>
     <div class="card-content">
