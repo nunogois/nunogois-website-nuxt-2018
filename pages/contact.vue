@@ -132,25 +132,25 @@ import item from '~/components/item.vue'
 .col-center {
     text-align:center;
 }
-.input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:    #909;
+.input::-webkit-input-placeholder, .textarea::-webkit-input-placeholder {
+    color:rgb(122, 122, 122);
 }
-.input:-moz-placeholder, .textarea:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-   color:    #909;
+.input:-moz-placeholder, .textarea:-moz-placeholder {
+   color:rgb(122, 122, 122);
    opacity:  1;
 }
-.input::-moz-placeholder, .textarea::-moz-placeholder { /* Mozilla Firefox 19+ */
-   color:    #909;
+.input::-moz-placeholder, .textarea::-moz-placeholder {
+   color:rgb(122, 122, 122);
    opacity:  1;
 }
-.input:-ms-input-placeholder, .textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:    #909;
+.input:-ms-input-placeholder, .textarea:-ms-input-placeholder { 
+   color:rgb(122, 122, 122);
 }
-.input::-ms-input-placeholder, .textarea::-ms-input-placeholder { /* Microsoft Edge */
+.input::-ms-input-placeholder, .textarea::-ms-input-placeholder {
    color:rgb(122, 122, 122);
 }
 
-.input::placeholder, .textarea::placeholder { /* Most modern browsers support this now. */
+.input::placeholder, .textarea::placeholder {
    color:rgb(122, 122, 122);
 }
 </style>

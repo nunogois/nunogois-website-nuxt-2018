@@ -52,7 +52,6 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  /* color: #333; */
   color: white;  
 }
 
