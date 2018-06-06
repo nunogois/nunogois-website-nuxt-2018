@@ -1,9 +1,6 @@
 <template>
     <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">        
-        <!-- <router-link :to="'/'" class="navbar-item">
-            <img src="~/assets/images/stonedesign.png" alt="Stone Design" class="logo">
-        </router-link> -->
+    <div class="navbar-brand">
 
         <span class="navbar-title" :class="{'is-invisible': !burger_open, 'animated fadeIn': burger_open}">NUNO GÓIS</span>
 

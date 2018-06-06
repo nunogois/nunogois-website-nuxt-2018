@@ -511,14 +511,6 @@ export default {
   text-align: center;
 }
 
-/* .nunogois-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-} */
-
 @media only screen and (max-width: 768px) {
   .nunogois-container {
     font-size:0.8em;
