@@ -11,10 +11,10 @@ module.exports = {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuno Góis - Full-Stack Developer. Portuguese full-stack developer experienced in .NET, ASP.NET, C#, Java, SQL, JavaScript and many other interesting technologies and matters of software development. Always looking for challenges, always looking to learn something new.' },
-      { property: 'og:title', content: 'Nuno Góis - Full-Stack Developer' },
-      { property: 'og:description', content: 'Nuno Góis - Full-Stack Developer. Portuguese full-stack developer experienced in .NET, ASP.NET, C#, Java, SQL, JavaScript and many other interesting technologies and matters of software development. Always looking for challenges, always looking to learn something new.' },
-      { property: 'og:image', content: 'https://www.nunogois.com/thumbnail.png' },
-      { property: 'og:url', content: 'https://www.nunogois.com/' },
+      { prefix: 'og: http://ogp.me/ns#', property: 'og:title', content: 'Nuno Góis - Full-Stack Developer' },
+      { prefix: 'og: http://ogp.me/ns#', property: 'og:description', content: 'Nuno Góis - Full-Stack Developer. Portuguese full-stack developer experienced in .NET, ASP.NET, C#, Java, SQL, JavaScript and many other interesting technologies and matters of software development. Always looking for challenges, always looking to learn something new.' },
+      { prefix: 'og: http://ogp.me/ns#', property: 'og:image', content: 'https://www.nunogois.com/thumbnail.png' },
+      { prefix: 'og: http://ogp.me/ns#', property: 'og:url', content: 'https://www.nunogois.com/' },
       { name: 'twitter:card', content: 'summary_large_image' }
     ],
     link: [
