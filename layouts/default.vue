@@ -1,5 +1,5 @@
 <template>
-  <div class="animated fadeIn">
+  <div class="animated fadeIn" v-show="loaded">
     <navbar/>
     <nuxt/>
   </div>
@@ -9,8 +9,16 @@
 import navbar from '~/components/navbar.vue'
 
 export default {
+  data () {
+    return {
+      loaded: false
+    }
+  },
   components: {
     navbar
+  },
+  mounted: function() {
+    this.loaded = true;
   }
 }
 </script>
@@ -44,7 +52,6 @@ html {
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  /* color: #333; */
   color: white;  
 }
 
@@ -55,5 +62,12 @@ body {
 
 .subtitle {
   margin-top: 0 !important;
+}
+
+a {
+  font-weight:bold;
+}
+a:hover {
+  color:#0061ff;
 }
 </style>

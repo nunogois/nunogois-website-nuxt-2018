@@ -4,3 +4,17 @@
 .page-enter, .page-leave-active {
     opacity: 0
 }
+
+.page_title {
+    width:100%;
+    text-align:left;
+    margin-left:50px;
+    font-size:26px;
+    padding-bottom:50px;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+      padding:10px;
+    }
+  }

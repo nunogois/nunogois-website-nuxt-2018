@@ -27,12 +27,17 @@ module.exports = {
   /*
   ** Build configuration
   */
+  plugins: [
+    { src: '~/plugins/fontawesome.js' }
+  ],
   css: [
     'assets/main.css',    
     'assets/scrollbar.css'
   ],
   modules: [
-    '@nuxtjs/bulma'
+    '@nuxtjs/bulma',
+    '@nuxtjs/axios',
+    '@nuxtjs/toast'
   ],
   build: {
     /*
