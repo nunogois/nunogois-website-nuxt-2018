@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-transparent is-fixed-top" aria-label="main navigation">
     <div class="navbar-brand">
 
         <span class="navbar-title" :class="{'is-invisible': !burger_open, 'animated fadeIn': burger_open}">NUNO GÓIS</span>
