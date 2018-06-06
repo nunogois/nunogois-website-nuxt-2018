@@ -35,7 +35,7 @@ import item from '~/components/item.vue'
                     text: '.NET',
                     title: '.NET',
                     color: 'rgb(186, 70, 216)',
-                    content: "I've always been a .NET developer, ever since I learned Visual Basic around 2005. C# has always been my favorite language but has taken a second place due to the relevance of JavaScript currently. There isn't much I haven't made in .NET: ASP.NET, WebForms, Web API, Web Services, SignalR, WinForms, Windows Services, Console Apps, Office Add-Ins, and so on. I've dabbled around with Xamarin and Core but never used them for big projects. It seems like there are better alternatives for Xamarin if you have the know-how. However Core seems like a great idea for cross-platform!"
+                    content: "I've always been a .NET developer, ever since I learned Visual Basic around 2005. C# has always been my favorite language but has taken a second place due to the relevance of JavaScript currently. There isn't much I haven't made in .NET: ASP.NET, WebForms, Web API, Web Services, SignalR, WinForms, Windows Services, Console Apps, Office Add-Ins, and so on. I'm currently developing in .NET Core and I've dabbled around with Xamarin but never used it for big projects. It seems like there are better alternatives for Xamarin if you have the know-how. I'm loving .NET Core!"
                 },
                 {
                     id: 2,         
@@ -112,7 +112,7 @@ import item from '~/components/item.vue'
                     icon: 'flask',
                     title: 'Others / Researching...',
                     color: '#2399f7',
-                    content: "Other than the skills listed here I'm always looking forward to add to my knowledge! Some of the things I'm interested in currently: Progressive Web Apps, GraphQL, Go, Python, WebAssembly, Blockchain, Phoenix (Elixir), and many others! Know of something that will interest me? <a href=\"javascript:;\" onclick=\"document.getElementById('tellmeaboutit').click();\">Tell me about it!</a>"
+                    content: "Other than the skills listed here I'm always looking forward to add to my knowledge! Some of the things I'm interested in currently: Progressive Web Apps, Mobile Development, GraphQL, AI, Machine Learning, Go, Python, WebAssembly, Blockchain, Phoenix (Elixir), and many others! Know of something that will interest me? <a href=\"javascript:;\" onclick=\"document.getElementById('tellmeaboutit').click();\">Tell me about it!</a>"
                 }
             ]
         }
