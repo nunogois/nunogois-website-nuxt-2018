@@ -28,7 +28,7 @@
     "@nuxtjs/bulma": "^1.1.0",
     "@nuxtjs/toast": "^3.0.0",
     "npm": "^5.8.0",
-    "nuxt": "^1.0.0"
+    "nuxt-edge": "^2.0.0-25500158.1b46a95"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
