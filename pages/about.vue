@@ -34,6 +34,19 @@ import item from '~/components/item.vue'
             }
 
             return years;
+        },
+        experience() {
+            var startDate = new Date('2011-03-01');
+            var today = new Date();
+
+            var years = (today.getFullYear() - startDate.getFullYear());
+
+            if (today.getMonth() < startDate.getMonth() ||
+            today.getMonth() == startDate.getMonth() && today.getDate() < startDate.getDate()) {
+                years--;
+            }
+
+            return years;
         }
     },
     mounted: function () {
@@ -43,7 +56,7 @@ import item from '~/components/item.vue'
                     icon: 'id-card',
                     title: 'Bio',
                     color: '#5ca9d6',
-                    content: "I am a " + this.age + " years old full-stack developer from Portugal. I love my job and have over 5 years of professional experience. I'm currently working for <a href=\"https://www.iqa.pt\" target=\"_blank\">IQA</a>, developing <a href=\"https://www.myagir.com\" target=\"_blank\">AGIR</a> and all of its related projects."
+                    content: "I am a " + this.age + " years old full-stack developer from Portugal. I love my job and have over " + this.experience + " years of professional experience. I'm currently working for <a href=\"https://www.iqa.pt\" target=\"_blank\">IQA</a>, developing <a href=\"https://www.myagir.com\" target=\"_blank\">AGIR</a> and all of its related projects."
                 },
                 {
                     id: 1,
