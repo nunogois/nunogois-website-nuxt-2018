@@ -15,10 +15,12 @@ module.exports = {
       { prefix: 'og: http://ogp.me/ns#', property: 'og:description', content: 'Nuno Góis - Full-Stack Developer. Portuguese full-stack developer experienced in .NET, .NET Core, ASP.NET, C#, Java, SQL, JavaScript and many other interesting technologies and matters of software development. Always looking for challenges, always looking to learn something new.' },
       { prefix: 'og: http://ogp.me/ns#', property: 'og:image', content: 'https://www.nunogois.com/thumbnail.png' },
       { prefix: 'og: http://ogp.me/ns#', property: 'og:url', content: 'https://www.nunogois.com/' },
-      { name: 'twitter:card', content: 'summary_large_image' }
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'theme-color', content: '#1a1a1a'}
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      //{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'icon', sizes: '192x192', href: '/logo192.png' },
       { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Open+Sans:300' },
       { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css' }
     ]

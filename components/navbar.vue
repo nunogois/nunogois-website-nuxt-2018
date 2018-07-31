@@ -14,6 +14,7 @@
     <div id="navbar_menu" class="navbar-menu animated fadeIn" :class="{'is-active': burger_open}">
         <div class="navbar-end">
             <router-link :to="'/'" class="navbar-item" @click.native="burger_close">HOME</router-link>
+            <router-link :to="'/blog'" class="navbar-item" @click.native="burger_close">BLOG</router-link>
             <router-link :to="'/about'" class="navbar-item" @click.native="burger_close">ABOUT ME</router-link>
             <router-link :to="'/skills'" class="navbar-item" @click.native="burger_close">SKILLS</router-link>
             <router-link :to="'/projects'" class="navbar-item" @click.native="burger_close">PROJECTS</router-link>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuno Góis - Full-Stack Developer</title>
+  <link rel="icon" sizes="192x192" href="/logo192.png">
+  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <link rel="stylesheet" href="/blog/ng-blogpost.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600" />
+</head>
+
+<body class="stackedit animated fadeIn">
+  <div style="text-align:center;"><a href="/blog" class="nunogois-top">NUNO GÓIS</a></div>
+
+  <div class="stackedit__html"><h1 id="web-development---1.-basics">Web Development - 1. Basics</h1>
+<p>Welcome to the first article of my new learning series!<br>
+In these series we’ll start by learning the basics of Web Development, which will not only help you develop modern websites but also modern and responsive cross-platform apps. Given the currently available technology, you can use this knowledge to develop pretty much anything!</p>
+<p>When I started my self-teaching journey I felt like most tutorials were unnecessarily complex, so this is my own twist on a learning series - Trying to focus on the essentials and being the guide that I wish I found when I was starting out.</p>
+<p>That being said, these series are meant to be accessible to everyone, it doesn’t matter if you’ve never even coded in your life. I’ll try to keep things simple!</p>
+<h1 id="if-youve-never-coded...">If you’ve never coded…</h1>
+<p>I believe programming is the epitome of the sentence:</p>
+<blockquote>
+<p>“It is easier than it looks.” - <em>Someone</em></p>
+</blockquote>
+<p>One of the tricks when looking at code is to think of it as the sum of many parts. It’s very uncommon, even for an experienced developer, to look at someone else’s code and immediately understand every step of what’s going on.</p>
+<p>If you ever feel lost it’s totally understandable, please don’t feel discouraged! My suggestion is to either keep pushing on until it <em>clicks</em> or seek help - Searching for more information or having someone explain things in some other way can make all the difference. Besides, learning and researching things all by yourself is one of the most valuable skills anywhere, specially when it comes to development.</p>
+<p>Searching for more information or asking for help is not something negative, it’s actually <strong>extremely positive</strong> and should be encouraged more!</p>
+<h1 id="web---how-does-it-work">Web - How does it work?</h1>
+<p>Whenever you access a website, that means there is a <strong>server</strong> somewhere that is giving your <strong>browser</strong> the necessary information to display the website. Confused?</p>
+<p>Well, a <strong>server</strong> is nothing more than a computer that is running (ideally) 100% of the time. That <strong>server</strong> is running specific code to serve your <strong>browser</strong> the files and information it needs to show you a website.</p>
+<p>A <strong>browser</strong> is something a lot easier to understand, since you’re most likely using one at this very moment to read this article! They take HTML, CSS and JavaScript (more on these later) and show you the resulting website. Here are some of the most popular <strong>browsers</strong>: <strong>Google Chrome</strong>, <strong>Firefox</strong>, <strong>Internet Explorer</strong>, <strong>Safari</strong>, <strong>Opera</strong>, etc. Some browsers are a bit <em>smarter</em> than others which means it is easier to develop to, say, <strong>Google Chrome</strong>’s latest version than <strong>Internet Explorer 6</strong>.<br>
+I <strong>strongly suggest</strong> using <strong>Google Chrome</strong> to follow along these learning series, as that’s what I’ll be using as well.</p>
+<p>Some very smart people figured out you can use these Web technologies in pretty much any platform, either by <em>emulating</em> the browser’s behavior or by building a <em>wrapper</em>, which is something like having an app that is in fact a browser window that opens your Web files.<br>
+This resulted in the fact that Web Development can currently be used for pretty much anything in any platform. How cool is that?</p>
+<h1 id="alright-so-how-does-one-develop-for-the-web">Alright, so how does one develop for the Web?</h1>
+<p>Web Development is comprised of:</p>
+<ul>
+<li><strong>Back-end</strong> - The server runs specific code and serves the necessary files and information;</li>
+<li><strong>Front-end</strong> - What the end-user will see and interact with;</li>
+</ul>
+<p>The <strong>Back-end</strong> is the code that runs on the server. Usually this means serving the necessary files and information to the <strong>Front-end</strong>. Sensitive code, like for example handling authentication or accessing a database directly, will also happen here. It doesn’t really matter what programming language is used here, so you’re free to use the one you prefer. The <strong>Back-end</strong> may also be known as the <strong>API</strong> (Application Programming Interface) in Web Development. This means it has a set of endpoints that we, as developers, can access to retrieve the necessary information for our <strong>Front-end</strong>.</p>
+<p>The <strong>Front-end</strong> is the code that will run on the user’s browser. This means things like the structure of the current page, how it looks and how it behaves. The <strong>Front-end</strong> can make requests to the <strong>Back-end</strong> whenever it needs, either to get more information or run some process on the server, for example. We’ll talk more about the <strong>Front-end</strong> in a bit.</p>
+<p>Some developers specialize in either the <strong>Back-end</strong> or the <strong>Front-end</strong>. As a Full-Stack Developer, I work on every single step of the process, which obviously includes these two main layers.<br>
+Most modern Web Applications are extremely focused on the <strong>Front-end</strong>, with the <strong>Back-end</strong> usually being a simple <strong>API</strong> that will helps us access our data and do some other sensitive work that we may need in our app.</p>
+<p>So what is the <strong>Front-end</strong> comprised of?</p>
+<ul>
+<li><strong>HTML (<em>HyperText Markup Language</em>)</strong> - The structure of a page;</li>
+<li><strong>CSS (<em>Cascading Style Sheets</em>)</strong> - The look and style of a page;</li>
+<li><strong>JS (<em>JavaScript</em>)</strong> - The functionality of a page;</li>
+</ul>
+<p>This is the big Triforce of Web Development. You may have heard of other frameworks and/or languages but they all come down to this in the end.<br>
+We’ll talk about each separately in a bit, for now here is the whole thing visualized:</p>
+<div class="mermaid"><svg xmlns="http://www.w3.org/2000/svg" id="mermaid-svg-o8glHbjGyCJ5FCCd" height="100%" viewBox="0 0 338.546875 228" style="max-width:338.546875px;"><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath" style="opacity: 1;"><path class="path" d="M140.37090163934425,66L109.140625,104L140.37090163934425,142" marker-end="url(#arrowhead204)" style="fill:none"></path><defs><marker id="arrowhead204" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath" style="opacity: 1;"><path class="path" d="M178.17597336065575,142L209.40625,104L178.17597336065575,66" marker-end="url(#arrowhead205)" style="fill:none"></path><defs><marker id="arrowhead205" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="translate(109.140625,104)" style="opacity: 1;"><g transform="translate(-51.7890625,-13)" class="label"><foreignObject width="103.578125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Files, data, etc.</span></div></foreignObject></g></g><g class="edgeLabel" transform="translate(209.40625,104)" style="opacity: 1;"><g transform="translate(-28.4765625,-13)" class="label"><foreignObject width="56.953125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span class="edgeLabel">Request</span></div></foreignObject></g></g></g><g class="nodes"><g class="node" id="A" transform="translate(159.2734375,43)" style="opacity: 1;"><rect rx="0" ry="0" x="-72.6015625" y="-23" width="145.203125" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-62.6015625,-13)"><foreignObject width="125.203125" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Server - Back-end</div></foreignObject></g></g></g><g class="node" id="B" transform="translate(159.2734375,165)" style="opacity: 1;"><rect rx="0" ry="0" x="-139.2734375" y="-23" width="278.546875" height="46"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-129.2734375,-13)"><foreignObject width="258.546875" height="26"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">Browser - Front-end (HTML, CSS, JS)</div></foreignObject></g></g></g></g></g></g></svg></div>
+<p>Of course this is a simplified chart but that looks a lot more accessible!<br>
+Before starting a project, let’s talk a bit about <strong>HTML</strong>, <strong>CSS</strong> and <strong>JS</strong>.</p>
+<h2 id="html">HTML</h2>
+<p><strong>HTML</strong> is the language that defines the structure of our pages. It is composed of several <strong>tags</strong>.</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.google.com<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Click here to go to Google!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>This is an <strong>anchor</strong> tag, for example. It tells the browser to show a link to Google’s website with the text <em>Click here to go to Google!</em></p>
+<p>Tags usually start with <code>&lt;tag&gt;</code> and end with <code>&lt;/tag&gt;</code> where <em>tag</em>  is the tag type we want to use. In this case, we used <strong>a</strong> for <strong>anchor</strong> and everything between the start and end tags will behave as a link. Whenever you find something <em>inside</em> a tag, like <strong>href</strong> in this case, it is called an <strong>attribute</strong>. An <strong>attribute</strong> is like a property of the tag that can have a certain value, in this case <strong>href</strong> sets the URL we want to open whenever someone clicks our link.</p>
+<p>There are other ways of producing <strong>HTML</strong>, like <a href="https://pugjs.org/api/getting-started.html">Pug</a>:</p>
+<pre class=" language-pug"><code class="prism  language-pug"><span class="token tag">a<span class="token attributes"><span class="token punctuation">(</span><span class="token attr-name">href</span><span class="token punctuation">=</span><span class="token attr-value"><span class="token string">'https://www.google.com'</span></span><span class="token punctuation">)</span></span></span> <span class="token plain-text">Click here to go to Google!</span>
+</code></pre>
+<p>However it will all end up being <strong>HTML</strong> in the end, so I suggest sticking to plain <strong>HTML</strong> for now and trying cool stuff like <strong>Pug</strong> later on.</p>
+<p>If you want to see a complex example of <strong>HTML</strong> try the following (instructions for <strong>Google Chrome</strong>):</p>
+<ol>
+<li>Press <strong>F12</strong> - A console should appear!</li>
+<li>Select the <strong>Elements</strong> option;</li>
+<li>You should see the <strong>HTML</strong> of the current page with the corresponding <strong>CSS</strong> of the currently selected element on the right;</li>
+</ol>
+<p>Don’t be scared right away if it all seems really complicated, there are many tags and rules but we’ll talk more about this later.</p>
+<h2 id="css">CSS</h2>
+<p><strong>CSS</strong> is what makes the structure of your page look modern and pretty! It also makes your pages <strong>responsive</strong>. If you don’t know what <strong>responsive</strong> means, a website that is <strong>responsive</strong> is a website that looks and behaves perfectly well in multiple devices and their respective resolutions. It will look perfectly fine on mobile for example, adjusting everything it needs to accommodate every element in the best way.</p>
+<p>Let’s say we had a <strong>span</strong> (which is a label/text) in our <strong>HTML</strong> and we wanted it to be blue.</p>
+<p><strong>HTML</strong>:</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span>This should be blue!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p><strong>CSS</strong>:</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector">span </span><span class="token punctuation">{</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> blue<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>This will make every <strong>span</strong> in our page blue, but since we only have one in our example that’s fine!</p>
+<p>Like <strong>HTML</strong> and <strong>Pug</strong>, there are lots of other cool ways of doing <strong>CSS</strong>, like <a href="https://sass-lang.com/">Sass</a> and <a href="http://lesscss.org/">Less</a> for example. However, I also suggest sticking with plain <strong>CSS</strong> for now and trying this cool stuff later on.</p>
+<p>More importantly for now, there are lots of <strong>CSS</strong> frameworks that will help us build a nice responsive website without much hassle. Unlike the previous point, I <strong>highly suggest</strong> picking a <strong>CSS</strong> framework for Web Development. One of the most popular <strong>CSS</strong> frameworks is <a href="https://getbootstrap.com/">Bootstrap</a> but there are many others that are worth a look. We’ll pick a cool <strong>CSS</strong> framework for our project later!</p>
+<h2 id="js">JS</h2>
+<p>So, if <strong>HTML</strong> gives us the structure of our page and <strong>CSS</strong> makes it look pretty, what does <strong>JS</strong> do?<br>
+<strong>JavaScript</strong>, not to be confused with <strong>Java</strong> (they’re totally different languages!), gives functionality and interactivity to our pages. This means everything from cool complex animations to making requests to the <strong>Back-end</strong>. It will seem a bit <em>daunting</em> at first but <strong>JS</strong> has evolved quite a lot and, in my honest opinion, is the <strong>best</strong> language to learn in 2018, since it will allow you to do pretty much <em>anything</em>. As someone used to strongly typed languages like <strong>C#</strong>, <strong>Java</strong> and so on, <strong>JS</strong> felt very loose at the beginning but I quickly got the hang of it.</p>
+<p><strong>JS</strong> is available on your browser right away, so let’s do some tricks to try it out. First, we need to open the browser’s console, which in most browsers will open when you press <strong>F12</strong> on your keyboard. If the console screen is not selected, make sure you select it.<br>
+With the console open, you should see a white screen. Try typing <code>1+1</code> for example and pressing enter to see the result - it should return <code>2</code> right below your instruction. If you press <strong>up</strong> on your keyboard, the console should show your previously inserted instruction.</p>
+<p>There are two key concepts that we must learn if we're new to programming in general: <strong>variables</strong> and <strong>functions</strong>. A <strong>variable</strong> is a space in memory where we declare a name and store a value. A <strong>function</strong> is an instruction that optionally receives some values as parameters and optionally returns a value. In <strong>JS</strong>, functions that do not explicitly return a value always return <strong>undefined</strong> which is a special value of <strong>JS</strong> for something that is not defined, that is, its value was never assigned. I'll explain more about these concepts in the next articles.</p>
+<p>For now let's try something like:</p>
+<pre class=" language-javascript"><code class="prism  language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Hello World!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>In this case the <strong>JS</strong> function <code>console.log</code> tells the browser to show on the console whatever is written inside its parenthesis. Like many other programming languages, <code>;</code> signifies the end of an instruction. <code>'</code> or <code>"</code> are equivalent in <strong>JS</strong> and both signify that whatever’s inside them should be considered a <strong>string</strong>, which is nothing more than a literal <strong>text</strong>.</p>
+<p>Let’s try something a bit more complex:</p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token function">prompt</span><span class="token punctuation">(</span><span class="token string">'What is your name?'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'Hi '</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">'!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>If you try it out the browser should ask your name and then greet you right after!</p>
+<p>Let’s try to understand the code, one thing at a time.<br>
+The very first thing the code does is declaring a <strong>variable</strong> called <strong>name</strong>. A <strong>variable</strong> is a space in memory that will hold a value, for example:</p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">var</span> myname <span class="token operator">=</span> <span class="token string">'Nuno'</span><span class="token punctuation">;</span>
+</code></pre>
+<p>This means that <strong>myname</strong> will have the value ‘Nuno’. If you try it on the console, whenever you enter <strong>myname</strong> on the console it will return the text ‘Nuno’.</p>
+<p>On the more complex code above, we’re saying we want <strong>name</strong> to be the result of the <strong>JS</strong> function <code>prompt</code>. The function <code>prompt</code> will show the user whatever text is inside its parenthesis and return the value that the user enters in the box. This means that at the end of this line, <strong>name</strong> will hold the value that the user typed on the box that was shown.</p>
+<p>After that, we call the <strong>JS</strong> function <code>alert</code>. This function shows a box with whatever text is inside its parenthesis. Here, we <em>concatenated</em> our text, which means, we mixed some text inside <code>'</code> with text that we know is inside the variable <strong>name</strong>.</p>
+<p>Like <strong>HTML</strong> and <strong>CSS</strong>, you can also use cool stuff like <a href="https://www.typescriptlang.org/">TypeScript</a> to produce <strong>JS</strong>. However, I suggest sticking to plain <strong>JS</strong> for now and trying <strong>TypeScript</strong> later on.</p>
+<h1 id="thanks-for-reading">Thanks for reading!</h1>
+<p>If you’ve read this far congratulations and thank you!</p>
+<p>As I said previously, if this seems confusing please don’t give up. You can <a href="/contact">contact me</a> anytime and I’ll try my best to help you. Other times things just take their time to <em>click</em> and these are just random examples. Starting a new project from scratch in the next article will definitely help understand some things.</p>
+<p>That being said, the next article should be focused on starting a new project and seeing how all these things come together.</p>
+<p><strong>PS:</strong> If it wasn't obvious enough, my blog isn't quite ready yet. There's still a lot I need to do to make it exactly how I want it, however time's been extremely scarce. I'll make a few articles for the learning series before focusing on the blog itself.</p>
+<p>I hope you liked this first article and if you catch any error or anything else that could be improved please let me know.</p>
+<p>See you soon!</p>
+</div>
+</body>
+
+</html>
