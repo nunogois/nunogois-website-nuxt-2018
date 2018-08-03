@@ -88,3 +88,33 @@ code, pre > code {
     color:white;
     font-weight:300;
 }
+
+
+/* CODE SNIPPETS */
+.prism .token.boolean, .prism .token.constant, .prism .token.deleted, .prism .token.number, .prism .token.property, .prism .token.symbol, .prism .token.tag, .token.pre.gfm .token.boolean, .token.pre.gfm .token.constant, .token.pre.gfm .token.deleted, .token.pre.gfm .token.number, .token.pre.gfm .token.property, .token.pre.gfm .token.symbol, .token.pre.gfm .token.tag {
+    color: #fb52b0;
+}
+
+.prism .token.atrule, .prism .token.attr-value, .prism .token.keyword, .token.pre.gfm .token.atrule, .token.pre.gfm .token.attr-value, .token.pre.gfm .token.keyword {
+    color: #4dcaff;
+}
+
+.prism .token.cdata, .prism .token.comment, .prism .token.doctype, .prism .token.prolog, .token.pre.gfm .token.cdata, .token.pre.gfm .token.comment, .token.pre.gfm .token.doctype, .token.pre.gfm .token.prolog {
+    color: #91969a;
+}
+
+.prism .token.attr-name, .prism .token.builtin, .prism .token.char, .prism .token.inserted, .prism .token.selector, .prism .token.string, .token.pre.gfm .token.attr-name, .token.pre.gfm .token.builtin, .token.pre.gfm .token.char, .token.pre.gfm .token.inserted, .token.pre.gfm .token.selector, .token.pre.gfm .token.string {
+    color: #bbf549;
+}
+
+.prism .token.function, .token.pre.gfm .token.function {
+    color: #ff8ea5;
+}
+
+.prism .language-css .token.string, .prism .style .token.string, .prism .token.entity, .prism .token.operator, .prism .token.url, .token.pre.gfm .language-css .token.string, .token.pre.gfm .style .token.string, .token.pre.gfm .token.entity, .token.pre.gfm .token.operator, .token.pre.gfm .token.url {
+    color: #eab27b;
+}
+
+.prism {
+    tab-size: 2;
+}

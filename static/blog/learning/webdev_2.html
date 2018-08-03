@@ -1,0 +1,286 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nuno Góis - Full-Stack Developer</title>
+  <link rel="icon" sizes="192x192" href="/logo192.png">
+  <meta name="theme-color" content="#1a1a1a">
+  <link rel="stylesheet" href="https://stackedit.io/style.css" />
+  <link rel="stylesheet" href="/blog/ng-blogpost.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,600">
+</head>
+
+<body class="stackedit animated fadeIn">
+  <div style="text-align:center;"><a href="/blog" class="nunogois-top">NUNO GÓIS</a></div>
+  <div class="stackedit__html"><h1 id="web-development---2.-new-project">Web Development - 2. New Project</h1>
+<p>Welcome to the second article of my new learning series!<br>
+If you’ve missed the first article, you can check it out <a href="/blog/learning/webdev_1.html">here</a>.</p>
+<p>In this second article we’ll talk about starting a new project from scratch. We’ll set up the project in a very minimalist way and try to run it! A sort of <strong>Hello World</strong> of the Web.</p>
+<p>Without further ado…</p>
+<h1 id="what-youll-need">What you’ll need</h1>
+<ul>
+<li>Computer</li>
+<li>Keyboard</li>
+</ul>
+<p>Ok, for real now… 😃</p>
+<ul>
+<li><a href="https://code.visualstudio.com/">Visual Studio Code</a></li>
+<li><a href="https://nodejs.org/en/">Node.js</a> - You can pick the LTS version</li>
+</ul>
+<p>Easy, right? Let’s talk about each for a moment.</p>
+<h2 id="visual-studio-code">Visual Studio Code</h2>
+<p>This is my favorite code editor at the moment. It’s part of this sort of new age of Microsoft where they’re a lot more focused on cross-platform and open source and, honestly, I think they did an awesome job!<br>
+If you ever used Visual Studio you’ll feel right at home. If not, I think it’s intuitive enough and definitely a lot easier than full-featured IDEs.</p>
+<p>If you’re totally new to all of this, think of <strong>Visual Studio Code</strong> as a notepad with superpowers 😉</p>
+<h2 id="node.js">Node.js</h2>
+<p>This is a very interesting one. Remember how we talked about JavaScript and how it was part of the big Triforce of the Front-end, giving functionality to our pages? Well, thanks to <a href="https://developers.google.com/v8/">Chrome’s V8 JavaScript Engine</a>, with <strong>Node</strong> it is <em>also</em> possible to run JavaScript on the Back-end! This means that with <strong>Node</strong> you only need to know JavaScript to develop both Front-end and Back-end.</p>
+<p>In this case, we’ll use <strong>Node</strong> to develop a very simple Back-end that will simply serve our Front-end files.</p>
+<h1 id="lets-get-started">Let’s get started!</h1>
+<p>Have you installed the requirements above? Great job!</p>
+<p>Now, do you know how to use a <strong>Terminal/Command Line/PowerShell</strong>? It’s a lot easier than it looks. If you’re on Windows you can simply search on the Start Menu for <strong>PowerShell</strong> or <strong>cmd</strong> and it should show up. Go ahead and open it!</p>
+<p>We’ll need <strong>npm</strong> available on the terminal to proceed. What is <strong>npm</strong>? <strong>npm</strong> is a JavaScript Package Manager. There are tons of packages available and <strong>npm</strong> helps us manage those packages.<br>
+You can also try <a href="https://yarnpkg.com/lang/en/">Yarn</a> in the future which does pretty much the same thing with some differences but since <strong>npm</strong> is included with <strong>Node</strong>, that’s what we’ll be using!</p>
+<p>So, how do we check if we have <strong>npm</strong> available on our terminal? Simply enter <strong>npm</strong> and check out what happens. If it gives you a big list of usage instructions, we’re <strong>ready to go</strong>!<br>
+However, if you’re facing issues, like the message <em>‘npm’ is not recognized as internal or external command, operable program or batch file</em> or anything of the sort, there are tons of resources out there to help you like <a href="https://stackoverflow.com/questions/20992723/npm-is-not-recognized-as-internal-or-external-command-operable-program-or-bat">this one</a>. Sometimes you just have to reboot your computer, other times you need to edit Environment Variables.</p>
+<p>You can close the console for now. Let’s create a folder for our cool projects! I like picking something simple without complicated characters or spaces, like <strong>C:\dev</strong> or something. Inside it, you can create a new folder for our new project with a name like <strong>hello_world</strong>. Personally, I’ll create a <strong>C:\dev\hello_world</strong> folder.</p>
+<h1 id="project-structure">Project Structure</h1>
+<p>Now that we created our folder, let’s open <strong>Visual Studio Code</strong> on the folder! You can do this in many ways, but a simple one is starting <strong>VS Code</strong> and selecting the option <strong>Open Folder</strong> and selecting our folder. If you have a <strong>Welcome</strong> tab open, you can go ahead and close it.</p>
+<p><strong>VS Code</strong> is pretty intuitive in my opinion. On the left you have options like <strong>Explorer</strong>, <strong>Search</strong>, <strong>Source Control</strong>, etc. <strong>Extensions</strong> is a very cool one if you want to customize your <strong>VS Code</strong> and add even more features!</p>
+<p>For now, let’s check the <strong>Explorer</strong>. You should see a square with the name of our folder on the left, in my case <strong>HELLO_WORLD</strong>. When you hover your cursor over this window you should see options like <strong>New File</strong> and <strong>New Folder</strong>. Let’s start by creating our first file: <strong>package.json</strong> - this file is a configuration file that will contain information about our website.</p>
+<h2 id="json">JSON</h2>
+<p><strong>JSON</strong> is a big part of JavaScript and is pretty easy to learn. When you think about simple variables, they usually hold values like so:</p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">'Nuno'</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> age <span class="token operator">=</span> <span class="token number">28</span><span class="token punctuation">;</span>
+</code></pre>
+<p>That’s cool and all, but with <strong>JSON</strong> we’re able to do this:</p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">var</span> me <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"Nuno"</span><span class="token punctuation">,</span> <span class="token string">"age"</span><span class="token punctuation">:</span> <span class="token number">28</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p><em>Woah</em>, what happened? You can go ahead and try it out on your browser’s console. When you enter <code>me</code> as an instruction afterwards, it returns our <strong>JSON</strong>. If you enter <code>me.name</code> it will return ‘Nuno’ and if you enter <code>me.age</code> it will return 28. <strong>JSON</strong> made it possible to define a complex <em>object</em> with several values.<br>
+What if we wanted to update the property <code>name</code> of our variable <code>me</code>? We can simply do something like <code>me.name = 'Góis'</code>. Want to add a new property? That’s easy too: <code>me.job = 'Full-Stack Developer'</code>. Cool, right?</p>
+<p>What you need to remember is that <strong>JSON</strong> standard syntax is like this:</p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token punctuation">{</span> <span class="token string">"key"</span><span class="token punctuation">:</span> <span class="token string">"value"</span><span class="token punctuation">,</span> <span class="token string">"key2"</span><span class="token punctuation">:</span> <span class="token string">"value2"</span><span class="token punctuation">,</span> <span class="token string">"key3"</span><span class="token punctuation">:</span> <span class="token string">"value3"</span> <span class="token punctuation">}</span>
+</code></pre>
+<h2 id="back-end">Back-end</h2>
+<p>As you might have guessed from the file extension, the <strong>package.json</strong> we created will hold a <strong>JSON</strong> with all the information needed to run our Back-end.<br>
+In this case, let’s input something like this in our <strong>package.json</strong>:</p>
+<pre class=" language-json"><code class="prism  language-json"><span class="token punctuation">{</span>
+	<span class="token string">"name"</span><span class="token punctuation">:</span> <span class="token string">"hello_world"</span><span class="token punctuation">,</span>
+	<span class="token string">"version"</span><span class="token punctuation">:</span> <span class="token string">"0.0.1"</span><span class="token punctuation">,</span>
+	<span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+		<span class="token string">"start"</span><span class="token punctuation">:</span> <span class="token string">"node server.js"</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>This tells that our project’s name is <strong>hello_world</strong> and its version is <strong>0.0.1</strong>, you can change these however you want. See <strong>scripts</strong>? It’s also defined as a <strong>JSON</strong> so that people can define several different scripts. In this case we define the script <strong>start</strong> - here we’re saying that whenever we run <code>npm run start</code>, we should in fact run <code>node server.js</code>, which is what will run our <strong>server.js</strong> file and start up our server.<br>
+The file <strong>server.js</strong> doesn’t exist yet, so let’s save the current <strong>package.json</strong> file (I like using CTRL+S for this) and create our new file: <strong>server.js</strong> - which will contain our Back-end logic.</p>
+<p>Before adding our <strong>server.js</strong> code however, we need to install a package that our code will use that will help us run our Back-end. I like using <strong>express</strong> for this, so let’s install it. One of <strong>VS Code</strong> cool features is that it includes a terminal right on the editor. If you’re not seeing it, simply go to <strong>View &gt; Integrated Terminal</strong> or drag up from the blue bar on the bottom. Select <strong>Terminal</strong> if it isn’t selected yet and run the command <code>npm install express</code> - This will install express on our project and add this dependency to our <strong>package.json</strong> automatically.<br>
+After it successfully installs, add this code to our <strong>server.js</strong>:</p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token keyword">var</span> express <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'express'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> app <span class="token operator">=</span> <span class="token function">express</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+app<span class="token punctuation">.</span><span class="token function">use</span><span class="token punctuation">(</span>express<span class="token punctuation">.</span><span class="token keyword">static</span><span class="token punctuation">(</span><span class="token string">'public'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+
+app<span class="token punctuation">.</span><span class="token function">listen</span><span class="token punctuation">(</span><span class="token number">3000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>That’s it for now! 😃<br>
+Our first two lines declare the variables <strong>express</strong> and <strong>app</strong>. The variable <strong>express</strong> will be our required <strong>express</strong> package that we added earlier and <strong>app</strong> will <em>build/initialize</em> a new <strong>express</strong> instance.<br>
+Next, we tell <strong>app</strong> that it should use a folder called <strong>public</strong> in our project to serve our Front-end files. This folder can be whatever name you choose to call it, some people call it <strong>app</strong> or <strong>static</strong>, for example. I’ll call it <strong>public</strong> for now.<br>
+The last line will tell our <strong>app</strong> to start listening on port <strong>3000</strong>!</p>
+<h2 id="front-end">Front-end</h2>
+<p>We’re almost there, now let’s add our <strong>public</strong> folder to our project to hold our Front-end files.<br>
+Inside, we’ll create an <strong>index.html</strong> file to hold our <strong>HTML</strong>. On the Web, the name <strong>index</strong> is commonly given to <em>default</em> pages.</p>
+<p>The basic structure of a modern <strong>HTML</strong> file goes something like this:</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Page Title<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>The <code>&lt;!DOCTYPE html&gt;</code> tag tells that our document is HTML5 and the <code>&lt;html&gt;</code> tags simply tell where our <strong>HTML</strong> starts and ends.<br>
+The <code>&lt;head&gt;</code> tag holds information about our <strong>HTML</strong> page, like the type of characters we will use and our page title, in this case.<br>
+The <code>&lt;body&gt;</code> tag holds the content of our page, whatever we want to display on our page!</p>
+<p>Let’s change our page title and body to something a bit more appropriate. We’ll put the following <strong>HTML</strong> in our <strong>index.html</strong>:</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Hello World!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+		Hello World! This is my first website.
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+		If you want to make a cool website like this, you can follow <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.nunogois.com/blog<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Nuno Góis Learning Series<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span> as well!
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>I already talked about the <code>&lt;a&gt;</code> tag in the previous article, the only new tag here is the <code>&lt;br&gt;</code> tag which means a line break in our text.</p>
+<p>Let’s see what this looks like!<br>
+Let’s save everything we edited so far. In <strong>VS Code</strong> terminal, let’s run <code>npm run start</code>. Remember what this does? It should run <strong>server.js</strong> and start our project on port 3000!<br>
+Unless you face an error, try going to <a href="http://localhost:3000">http://localhost:3000</a> on your browser and see what happens!<br>
+Hopefully you’ll see the result of our <strong>HTML</strong>. Despite what we said in the page, it isn’t that cool yet, is it? Let’s change that soon. But hey, it’s a start! Why <strong>localhost:3000</strong>? Well, <strong>localhost</strong> is a special keyword that will always point to your own computer and <strong>:3000</strong> tells what port we’re accessing, in this case 3000 which is what we set in <strong>server.js</strong>.</p>
+<p>If you want to stop running your server, simply press CTRL+C on the terminal. You can start it again anytime by running <code>npm run start</code> again.</p>
+<p>Now let’s spice things up a bit!</p>
+<p>It’s possible to have <strong>JS</strong> and <strong>CSS</strong> inside our <strong>HTML</strong> file, but I believe having everything on their own files is a good practice. Because of that, let’s add <strong>index.js</strong> and <strong>index.css</strong> files to our <strong>public</strong> folder.</p>
+<p>We still need to tell our <strong>HTML</strong> that we want it to use these files for our page, so we add them on our <code>&lt;head&gt;</code> tag, like this:</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Hello World!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- NEW! --&gt;</span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span> <span class="token comment">&lt;!-- NEW! --&gt;</span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+		Hello World! This is my first website.
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">&gt;</span></span>
+		If you want to make a cool website like this, you can follow <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span>  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.nunogois.com/blog<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Nuno Góis Learning Series<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span> as well!
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p>See the <code>&lt;!-- NEW! --&gt;</code> I added to the code? Those are just <strong>HTML</strong> comments. Comments don’t matter in terms of code or functionality, they’re only there for informative purposes, in this case to show you where I added the new tags! You can go ahead and delete them if you want.<br>
+Other languages have comments like these <code>// This is a comment!</code> or these <code>/* This is also a comment! */</code>, for example.</p>
+<p>Now that we added our <strong>CSS</strong> and <strong>JS</strong> files, let’s test them to see if they’re working.</p>
+<p>First, let’s use our <strong>CSS</strong> file to align our text to the center of the page:</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector">body </span><span class="token punctuation">{</span>
+	<span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>Here we’re saying that the text inside our <code>body</code> element should be aligned to the center.</p>
+<p>Now, let’s use our <strong>JS</strong> file to show something on the console, just to see if it’s working:</p>
+<pre class=" language-javascript"><code class="prism  language-javascript">console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"Yep, it's working!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>Go ahead and run your server again or reload the <a href="http://localhost:3000">http://localhost:3000</a> page. Check if your text is now centered and that the text <code>Yep, it's working!</code> was shown on the console.</p>
+<p>Great, now we can experiment all we want with our new files and check out what happens!<br>
+We still can’t show off to anyone, unless you know how to open ports on your router and/or firewall - in which case you can open port 3000.<br>
+Either way don’t worry, we’ll learn about cool and free ways to host our website soon!</p>
+<h1 id="feeling-adventurous">Feeling adventurous?</h1>
+<p>Feeling adventurous and want to try something cooler right away? I hope so!<br>
+Go ahead and try this combo, based on this <a href="https://dansup.github.io/bulma-templates/templates/landing.html">Bulma template</a>. If you don’t know <a href="https://bulma.io/">Bulma</a>, it’s one of my favorite CSS frameworks.</p>
+<p>Here you go:</p>
+<p><strong>HTML (index.html)</strong>:</p>
+<pre class=" language-html"><code class="prism  language-html"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">http-equiv</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>X-UA-Compatible<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>IE=edge<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width=device-width, initial-scale=1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Hello World!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+
+	<span class="token comment">&lt;!-- Open Sans: https://fonts.google.com/specimen/Open+Sans --&gt;</span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://fonts.googleapis.com/css?family=Open+Sans:300,400,700<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+	<span class="token comment">&lt;!-- Bulma: https://bulma.io/ --&gt;</span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css<span class="token punctuation">"</span></span> <span class="token punctuation">/&gt;</span></span>  
+
+	<span class="token comment">&lt;!-- Noty: https://ned.im/noty/# --&gt;</span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+	<span class="token comment">&lt;!-- Animate.css: https://daneden.github.io/animate.css/ --&gt;</span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css<span class="token punctuation">"</span></span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+	<span class="token comment">&lt;!-- Our page files! --&gt;</span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index.css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>index.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>section</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hero is-info is-fullheight<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>hero-body<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>container has-text-centered<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>column is-6 is-offset-3<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>title<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Hello World!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>subtitle<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>This is my first website. If you want to learn Web Development like me, check out <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span>  <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.nunogois.com/blog<span class="token punctuation">"</span></span>  <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>_blank<span class="token punctuation">"</span></span>  <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>explicit-link<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Nuno Góis Learning Series!<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>box<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+						<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>field is-grouped<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+							<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>control is-expanded<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+								<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>input<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Enter your name here<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+							<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+							<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>control<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+								<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>button is-info<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>greet()<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Greet Me<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+							<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+						<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>section</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+<p><strong>CSS (index.css)</strong>:</p>
+<pre class=" language-css"><code class="prism  language-css"><span class="token selector">html, body </span><span class="token punctuation">{</span>
+	<span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'Open Sans'</span>, serif<span class="token punctuation">;</span>
+	<span class="token property">overflow</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.hero.is-info</span> </span><span class="token punctuation">{</span>
+	<span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>
+		<span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0.75</span><span class="token punctuation">)</span>,
+		<span class="token function">rgba</span><span class="token punctuation">(</span><span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0</span>, <span class="token number">0.55</span><span class="token punctuation">)</span>
+	<span class="token punctuation">)</span>, 
+	<span class="token url">url('https://unsplash.it/1200/900?random')</span> no-repeat center center fixed<span class="token punctuation">;</span>
+
+	<span class="token property">-webkit-background-size</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+	<span class="token property">-moz-background-size</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+	<span class="token property">-o-background-size</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+	<span class="token property">background-size</span><span class="token punctuation">:</span> cover<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.hero</span> <span class="token class">.nav</span>, <span class="token class">.hero.is-success</span> <span class="token class">.nav</span> </span><span class="token punctuation">{</span>
+	<span class="token property">-webkit-box-shadow</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+	<span class="token property">box-shadow</span><span class="token punctuation">:</span> none<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector"><span class="token class">.hero</span> <span class="token class">.subtitle</span> </span><span class="token punctuation">{</span>
+	<span class="token property">padding</span><span class="token punctuation">:</span> <span class="token number">3</span>rem  <span class="token number">0</span><span class="token punctuation">;</span>
+	<span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">1.5</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>  
+
+<span class="token selector"><span class="token class">.explicit-link</span> </span><span class="token punctuation">{</span>
+	<span class="token property">color</span><span class="token punctuation">:</span> lightskyblue  <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>JS (index.js)</strong>:</p>
+<pre class=" language-javascript"><code class="prism  language-javascript"><span class="token comment">// If someone presses the Enter key on the name field we should greet them!</span>
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"keyup"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// Whenever someone presses a key on this field</span>
+	<span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>keyCode <span class="token operator">===</span> <span class="token number">13</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment">// If the key that was pressed is the Enter key</span>
+		<span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Call the function</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Function greet:</span>
+<span class="token keyword">function</span> <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token keyword">var</span> name <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span> <span class="token comment">// Get the current value of the name field</span>
+
+	<span class="token comment">// Show noty while setting some options:</span>
+	<span class="token keyword">new</span> <span class="token class-name">Noty</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+		text<span class="token punctuation">:</span> <span class="token string">'Hello '</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">', nice to meet you!'</span><span class="token punctuation">,</span>
+		layout<span class="token punctuation">:</span> <span class="token string">'topCenter'</span><span class="token punctuation">,</span>
+		theme<span class="token punctuation">:</span> <span class="token string">'nest'</span><span class="token punctuation">,</span>
+		type<span class="token punctuation">:</span> <span class="token string">'info'</span><span class="token punctuation">,</span>
+		animation<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+			open<span class="token punctuation">:</span> <span class="token string">'animated fadeInDown'</span><span class="token punctuation">,</span> <span class="token comment">// Animate.css class names</span>
+			close<span class="token punctuation">:</span> <span class="token string">'animated fadeOutUp'</span>  <span class="token comment">// Animate.css class names</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>There’s a ton of new stuff in there to explore! You obviously don’t need to understand everything right now, but it’s a good way to start checking out how some advanced stuff works all by yourself.</p>
+<h1 id="thanks-for-reading">Thanks for reading!</h1>
+<p>Way to go champ! 👍</p>
+<p>If you’re feeling lost don’t worry!  You can <a href="https://www.nunogois.com/contact">contact me</a> as always to clear things up.</p>
+<p>Before starting the next article I’ll focus on improving the blog a bit, so that may take a while. Until then, I suggest trying out some experiments with everything we’ve learned so far and exploring the advanced example above.</p>
+<p>See you then!</p>
+</div>
+</body>
+
+</html>
