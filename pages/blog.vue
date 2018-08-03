@@ -4,7 +4,10 @@
     <div class="container">
         <font-awesome-icon :icon="['fas', 'graduation-cap']" style="font-size:56px;" class="animated pulse infinite" />
         <span style="font-size:28px;">Learning Series</span>
-        <span> - Click the title of any of the articles below:</span>
+        <br>
+        <span>The blog is still under development. Join my <a href="https://discord.gg/rvT8TCm">Discord</a> for help and to help others!</span>
+        <br>
+        <span>Click the title of any of the articles below:</span>
         <div class="columns is-multiline" style="padding-top:20px">                
           <blog-item v-for="item in items" :key="item.id" :title="item.title" :subtitle="item.subtitle" :color="item.color" :description="item.description" :link="item.link" />
         </div>
