@@ -12,6 +12,7 @@ module.exports = {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Nuno Góis - Full-Stack Developer. Portuguese full-stack developer experienced in .NET, ASP.NET, .NET Core, C#, Java, SQL, JavaScript and many other interesting technologies and matters of software development. Always looking for challenges, always looking to learn something new.' },
       { prefix: 'og: http://ogp.me/ns#', property: 'og:title', content: 'Nuno Góis - Full-Stack Developer' },
+      { prefix: 'og: http://ogp.me/ns# website: http://ogp.me/ns/website#', property: 'og:type', content: 'website' },
       { prefix: 'og: http://ogp.me/ns#', property: 'og:description', content: 'Nuno Góis - Full-Stack Developer. Portuguese full-stack developer experienced in .NET, .NET Core, ASP.NET, C#, Java, SQL, JavaScript and many other interesting technologies and matters of software development. Always looking for challenges, always looking to learn something new.' },
       { prefix: 'og: http://ogp.me/ns#', property: 'og:image', content: 'https://www.nunogois.com/thumbnail.png' },
       { prefix: 'og: http://ogp.me/ns#', property: 'og:url', content: 'https://www.nunogois.com/' },
