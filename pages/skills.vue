@@ -104,7 +104,7 @@ import item from '~/components/item.vue'
                     icon: 'gamepad',
                     title: 'Game Development',
                     color: '#1fff3c',
-                    content: "The game engine I'm most familiar with is Unity, that I use along with C# to create simple 2D games and prototypes that are cross-platform. Other than Unity I've experimented with XNA, Unreal Engine, LibGDX and others."
+                    content: "The game engine I'm most familiar with is Unity, that I use along with C# to create simple 2D games and prototypes that are cross-platform. Other than Unity I've experimented with Phaser, XNA, Unreal Engine, LibGDX and others."
                 },
                 {
                     id: 11,         
