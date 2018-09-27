@@ -5,6 +5,9 @@
         <font-awesome-icon :icon="['fas', 'graduation-cap']" style="font-size:56px;" class="animated pulse infinite" />
         <span style="font-size:28px;">Learning Series</span>
         <br>
+        <span>NOTE: Unfortunately, I'll have to put my Learning Series on hold for an indeterminate time due to bigger projects. Follow me on social media so you know when I get back to it!</span>
+        <br>
+        <br>
         <span>If you want real-time help or wish to help others that may need your help, you can go ahead and join my <a href="https://discord.gg/rvT8TCm">Discord</a>.</span>
         <br>
         <span>Click the title of any of the articles below to get started:</span>
