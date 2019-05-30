@@ -6,6 +6,7 @@
             <image-item v-for="item in items" :key="item.id" :image="item.image" :title="item.title" :color="item.color" :content="item.content"/>
         </div>
     </div>
+    <h1 class="animated slideInUp" style="text-align:center;margin-top:40px;">Check out my <a href="https://github.com/yokiharo" target="_blank">GitHub</a> for some open-source projects!</h1>
   </div>
 </template>
 

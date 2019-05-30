@@ -28,7 +28,7 @@ import item from '~/components/item.vue'
                     icon: 'js-square',
                     title: 'JavaScript',
                     color: '#f7df1e',
-                    content: "In my opinion, JavaScript is the language you <i>need</i> to know in 2018. Yes, it has its weird parts, but you can do pretty much everything you think of with it and a bit of front-end knowledge (HTML, CSS). I use JSON even for non-JavaScript related projects. I've started using JavaScript mostly with jQuery as a DOM manipulator and AJAX, but now I'm using it with Node.js with Express, Nuxt/Vue.js, Socket.io, NativeScript, some experiments on Electron and just plain JavaScript using some new ECMAScript cool features sometimes. TypeScript seems great from what I've seen and I intend to dive deeper into it at a later stage."
+                    content: "In my opinion, JavaScript is the language you <i>need</i> to know. Yes, it has its weird parts, but you can do pretty much everything you think of with it and a bit of front-end knowledge (HTML, CSS). I use JSON even for non-JavaScript related projects. I've started using JavaScript mostly with jQuery as a DOM manipulator and AJAX, but now I'm using it with Node.js with Express, Vue.js (Nuxt, Quasar Framework, etc), Socket.io, NativeScript, some experiments on Electron and just plain JavaScript using some new ECMAScript cool features sometimes. TypeScript seems great from what I've seen and I intend to dive deeper into it at a later stage."
                 },
                 {
                     id: 1,

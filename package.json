@@ -1,7 +1,7 @@
 {
   "name": "nunogois",
   "version": "1.0.0",
-  "description": "Nuno Góis Portfolio (NuxtJS)",
+  "description": "Nuno Góis Portfolio",
   "author": "Nuno Góis <nunojosegois@gmail.com>",
   "private": true,
   "config": {
@@ -19,16 +19,16 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "@fortawesome/fontawesome": "^1.1.5",
-    "@fortawesome/fontawesome-free-brands": "^5.0.9",
-    "@fortawesome/fontawesome-free-regular": "^5.0.9",
-    "@fortawesome/fontawesome-free-solid": "^5.0.9",
-    "@fortawesome/vue-fontawesome": "0.0.22",
-    "@nuxtjs/axios": "^5.3.1",
-    "@nuxtjs/bulma": "^1.1.0",
-    "@nuxtjs/toast": "^3.0.0",
-    "npm": "^5.8.0",
-    "nuxt-edge": "^2.0.0-25500158.1b46a95"
+    "@fortawesome/fontawesome-svg-core": "^1.2.18",
+    "@fortawesome/free-brands-svg-icons": "^5.8.2",
+    "@fortawesome/free-regular-svg-icons": "^5.8.2",
+    "@fortawesome/free-solid-svg-icons": "^5.8.2",
+    "@fortawesome/vue-fontawesome": "^0.1.6",
+    "@nuxtjs/axios": "^5.5.2",
+    "@nuxtjs/bulma": "^1.2.4",
+    "@nuxtjs/toast": "^3.2.1",
+    "npm": "^6.9.0",
+    "nuxt": "^2.7.1"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
