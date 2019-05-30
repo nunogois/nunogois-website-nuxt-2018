@@ -22,8 +22,6 @@ export default {
 </script>
 
 <style>
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:300);
-
 .anim-text-flow span,
 .anim-text-flow-hover:hover span {
   animation-name: anim-text-flow-keys;
