@@ -1,25 +1,24 @@
 # nunogois
 
-> Nuno Góis Portfolio (NuxtJS)
+Nuno Góis Portfolio (NuxtJS)
 
 ## Build Setup
 
 ``` bash
 # install dependencies
-$ npm install # Or yarn install
+$ yarn # Or npm install
 
 # serve with hot reload at localhost:3000
-$ npm run dev
+$ yarn dev # Or npm run dev
 
 # build for production and launch server
-$ npm run build
-$ npm start
+$ yarn build # Or npm run build
 
 # generate static project
-$ npm run generate
+$ yarn generate # Or npm run generate
 
 # check-in / publish
-$ git push origin master
+$ git push origin master # Or through VSCode, etc - It will auto publish
 ```
 
 For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
