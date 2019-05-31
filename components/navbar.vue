@@ -27,12 +27,12 @@
 
 <style>
 .navbar-title {
-    color:#989898;
+    color:#cccccc;
     padding:15px;
 }
 
 .navbar-item {
-    color: #989898;
+    color: #cccccc;
     -webkit-transition: 0.5s;
     transition: 0.5s;
     font-weight:300;
@@ -41,21 +41,29 @@
     max-height:inherit;
 }
 a.navbar-item:hover, a.navbar-item.is-active, a.navbar-link:hover, a.navbar-link.is-active, .navbar-burger:hover {
-    background-color:inherit
-    
+    background-color:inherit;
 }
+
+a.navbar-item:hover {
+    color: #6a74ff;
+}
+
 .navbar {
     background-color: #1a1a1a;
 }
 
+.navbar-burger {
+    color: #cccccc
+}
+
 .nuxt-link-exact-active {
-    color:#d8d8d8;
+    color:#91ffbd;
 }
 
 @media screen and (max-width: 1023px) {
     .navbar-menu {
         background-color: #1a1a1a;
-        color: #989898;
+        color: #cccccc;
     }
 }
 </style>
