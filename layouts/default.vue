@@ -6,6 +6,8 @@
 </template>
 
 <script>
+console.log('%cNuno Góis © ' + new Date().getFullYear(), 'font-size: 20px; background: black;color:white;padding:10px;');
+
 import navbar from '~/components/navbar.vue'
 
 export default {
