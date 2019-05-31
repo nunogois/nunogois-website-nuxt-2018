@@ -28,7 +28,7 @@ import item from '~/components/item.vue'
                     icon: 'js-square',
                     title: 'JavaScript',
                     color: '#f7df1e',
-                    content: "In my opinion, JavaScript is the language you <i>need</i> to know. Yes, it has its weird parts, but you can do pretty much everything you think of with it and a bit of front-end knowledge (HTML, CSS). I use JSON even for non-JavaScript related projects. I've started using JavaScript mostly with jQuery as a DOM manipulator and AJAX, but now I'm using it with Node.js with Express, Vue.js (Nuxt, Quasar Framework, etc), Socket.io, NativeScript, some experiments on Electron and just plain JavaScript using some new ECMAScript cool features sometimes. TypeScript seems great from what I've seen and I intend to dive deeper into it at a later stage."
+                    content: "In my opinion, JavaScript is the language you <i>need</i> to know. Yes, it has its weird parts, but you can do pretty much everything you think of with it and a bit of front-end knowledge (HTML, CSS). I use JSON even for non-JavaScript related projects. My first experience using JavaScript was mostly with jQuery as a DOM manipulator and AJAX but now I'm using it for almost everything, depending on the project's requirements. I've extensively used Node.js (Express, Socket.io, etc), Vue.js (Nuxt, Quasar Framework, etc) and sometimes just plain JavaScript using some cool new ECMAScript features. TypeScript seems great from what I've seen and I intend to dive deeper into it at a later stage."
                 },
                 {
                     id: 1,
@@ -96,7 +96,7 @@ import item from '~/components/item.vue'
                     icon: 'mobile-alt',
                     title: 'Mobile Development',
                     color: '#daeaa9',
-                    content: "I've explored several mobile frameworks including PhoneGap/Cordova, Xamarin, Framework7, Jasonette and NativeScript. I've ended up using NativeScript the most as I feel it offers the best solution for native apps using my know-how. For simple websites that are already responsive, I like using tools like PWABuilder."
+                    content: "I've explored several mobile frameworks including PhoneGap/Cordova, Xamarin and NativeScript. Lately, I prefer to build Progressive Web Apps with Quasar Framework. PWAs allow the user to install the app on any platform. It's also extremely easy to build for mobile using Quasar Framework!"
                 },
                 {
                     id: 10,         
@@ -112,7 +112,7 @@ import item from '~/components/item.vue'
                     icon: 'flask',
                     title: 'Others / Researching...',
                     color: '#2399f7',
-                    content: "Other than the skills listed here I'm always looking forward to add to my knowledge! Some of the things I'm interested in currently: Progressive Web Apps, Mobile Development, GraphQL, AI, Machine Learning, Go, Python, WebAssembly, Blockchain, Phoenix (Elixir), and many others! Know of something that will interest me? <a href=\"javascript:;\" onclick=\"document.getElementById('tellmeaboutit').click();\">Tell me about it!</a>"
+                    content: "Other than the skills listed here I'm always looking forward to add to my knowledge! Some of the things I'm interested in currently: GraphQL, AI, Machine Learning, Go, Python, WebAssembly, Blockchain, Phoenix (Elixir), and many others! Know of something that will interest me? <a href=\"javascript:;\" onclick=\"document.getElementById('tellmeaboutit').click();\">Tell me about it!</a>"
                 }
             ]
         }
