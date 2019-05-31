@@ -10,6 +10,7 @@
             <div class="column is-4"><a href="https://www.instagram.com/yokiharo/" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #C13584" :icon="['fab', 'instagram']"/></a></div>
             <div class="column is-4"><a href="https://discord.gg/rvT8TCm" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #7289da" :icon="['fab', 'discord']"/></a></div>
         </div>
+        <h1 class="animated slideInUp" style="text-align:center;margin-top:30px;">© {{year}} - Nuno Góis</h1>
     </div>
     <div class="container animated fadeIn" v-show="email">
         <input class="input" type="text" id="name" name="name" v-model="name" placeholder="Name" style="display:none;">
@@ -47,7 +48,7 @@
             </div>
         </div>
     </div>
-    <h1 class="animated slideInUp" style="text-align:center;margin-top:40px;">© {{year}} - Nuno Góis</h1>
+    
   </div>
 </template>
 
