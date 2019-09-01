@@ -4,6 +4,7 @@
 
         <span class="navbar-title" :class="{'is-invisible': !burger_open, 'animated fadeIn': burger_open}">NUNO GÓIS</span>
 
+        <span class="navbar-title navbar-title-menu" @click="burger_toggle">MENU</span>
         <div class="navbar-burger burger" data-target="navbar_menu" @click="burger_toggle" :class="{'is-active': burger_open}">
             <span></span>
             <span></span>
@@ -29,6 +30,17 @@
 .navbar-title {
     color:#cccccc;
     padding:15px;
+}
+
+.navbar-title-menu {
+  margin-left: auto;
+  padding-top:14px;
+  padding-right:0px;
+  cursor: pointer;
+}
+
+.navbar-burger {
+  margin-left:0px;
 }
 
 .navbar-item {
@@ -65,6 +77,31 @@ a.navbar-item:hover {
         background-color: #1a1a1a;
         color: #cccccc;
     }
+}
+
+@media screen and (min-width: 619px) {
+  .navbar-title-menu {
+    display:none;
+  }
+  .navbar-burger {
+    display:none;
+  }
+  .navbar-item {
+    display: flex;
+    align-items: center;
+  }
+  .navbar, .navbar-menu, .navbar-start, .navbar-end {
+    align-items: stretch;
+    display: flex;
+  }
+  .navbar-menu {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+  .navbar-end {
+    justify-content: flex-end;
+    margin-left: auto;
+  }
 }
 </style>
 

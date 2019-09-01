@@ -7,27 +7,32 @@
 
 <url>
   <loc>https://www.nunogois.com/</loc>
-  <lastmod>2018-06-06T21:08:26+00:00</lastmod>
+  <lastmod>2019-09-01T15:40:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.nunogois.com/about/</loc>
-  <lastmod>2018-06-06T21:08:26+00:00</lastmod>
+  <lastmod>2019-09-01T15:40:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nunogois.com/skills/</loc>
-  <lastmod>2018-06-06T21:08:26+00:00</lastmod>
+  <lastmod>2019-09-01T15:40:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nunogois.com/projects/</loc>
-  <lastmod>2018-06-06T21:08:26+00:00</lastmod>
+  <lastmod>2019-09-01T15:40:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.nunogois.com/blog/</loc>
+  <lastmod>2019-09-01T15:40:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.nunogois.com/contact/</loc>
-  <lastmod>2018-06-06T21:08:26+00:00</lastmod>
+  <lastmod>2019-09-01T15:40:00+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 
