@@ -70,6 +70,7 @@ a.navbar-item:hover {
 
 .nuxt-link-exact-active {
     color:#91ffbd;
+    background-color: transparent !important;
 }
 
 @media screen and (max-width: 1023px) {
