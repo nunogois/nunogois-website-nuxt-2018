@@ -29,7 +29,8 @@
     "@nuxtjs/google-analytics": "^2.2.0",
     "@nuxtjs/toast": "^3.2.1",
     "npm": "^6.9.0",
-    "nuxt": "^2.9.2"
+    "nuxt": "^2.9.2",
+    "rss-parser": "^3.9.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

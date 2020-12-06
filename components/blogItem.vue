@@ -1,6 +1,6 @@
 <template>
-<div class="column is-4">    
-    <div class="card animated fadeIn" v-show="loaded">
+<div class="column is-3">    
+    <!-- <div class="card animated fadeIn" v-show="loaded">
         <a :href="link" class="card-link">
         <h1 class="card-category" v-html="title"></h1>
         <h1 class="card-subtitle" v-html="subtitle" :style="{color: color}"></h1>
@@ -8,13 +8,22 @@
         <div class="card-content">            
             <div class="content" v-html="description"></div>
         </div>
-    </div>    
+    </div>     -->
+    <div class="card animated fadeIn" v-show="loaded">
+        <a :href="item.link" class="card-link">
+          <h1 class="card-category" v-html="item.title"></h1>
+        </a>
+        <span style="font-size:12px;float:right;padding: 0px 25px 5px 0px;">{{ item.isoDate.split('T')[0] }}</span>
+        <div class="card-content">
+            <div class="content" v-html="item.content"></div>
+        </div>
+    </div>
 </div>
 </template>
 
 <script>
 export default {
-    props: ['title', 'subtitle', 'color', 'description', 'link'],
+    props: ['item'],
     data () {
         return {
             loaded: false
@@ -50,10 +59,15 @@ export default {
 }
 
 .card-category {
-    padding-top:20px;
+    padding-top:5px;
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    min-height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .card-subtitle {
@@ -65,7 +79,13 @@ export default {
     padding-top:0px;
 }
 
-.card-content > .content {
-    padding-top:20px;
+.medium-feed-link {
+  position: absolute;
+  bottom: 15px;
 }
+
+.medium-feed-snippet {
+  padding-bottom: 1em;
+}
+
 </style>
