@@ -18,7 +18,7 @@
             <input type="text" v-model="search" class="searchbox" placeholder="Looking for something in particular? Try typing here!"/>        
         </div>
         <div class="columns is-multiline">                
-          <blog-item v-for="item in s_items" :key="item.guid" :item="item" />
+          <blog-item v-for="item in s_items" :key="item.guid" :data-guid="item.guid" :item="item" />
         </div>
     </div>
   </div>
@@ -50,18 +50,42 @@ var parser = new Parser()
         }
     },
     mounted: function () {
+      window.update_colors = function(auth) {
+        var colors = {}
+
+        var cards = document.getElementsByClassName("blog-item")
+        for (var i = 0; i < cards.length; i++) {
+            var guid = cards[i].dataset.guid
+            var color = cards[i].getElementsByClassName("card-category")[0].style.color
+            colors[guid] = color
+        }
+
+        var xhttp = new XMLHttpRequest()
+        xhttp.open("POST", "https://cors-anywhere.herokuapp.com/https://nunogois-api.herokuapp.com/colors", true)
+        xhttp.setRequestHeader("Content-type", "application/json")
+        xhttp.send(JSON.stringify({ auth: auth, colors: colors }))
+      }
+
       var el = this
       parser.parseURL('https://cors-anywhere.herokuapp.com/https://medium.com/feed/@yokiharo').then(function (res) {
-        res.items.forEach(function (item) {
-          var content = item.content
-          var i = item.content.indexOf('Continue reading on Medium »')
-          content = content.substring(0, i-1) + ' target="__blank">Read More' + content.split('Continue reading on Medium »')[1]
-          item.content = content
-        })
-
-        console.log(res.items)
+        
+          res.items.forEach(function (item) {
+            var content = item.content
+            var i = item.content.indexOf('Continue reading on Medium »')
+            content = content.substring(0, i-1) + ' target="__blank">Read More' + content.split('Continue reading on Medium »')[1]
+            item.content = content
+            item.color = undefined
+            item.loaded = true
+          })
 
         el.items = res.items
+
+        el.$axios.get('https://cors-anywhere.herokuapp.com/https://nunogois-api.herokuapp.com/colors').then(function (colors) {
+          res.items.forEach(function (item) {
+            item.color = colors.data[item.guid]
+          })
+          el.$set(el.items, Object.assign([], res.items))
+        })
       })
         // this.items = [ 
         //         {

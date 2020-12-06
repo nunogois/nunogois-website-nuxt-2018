@@ -1,5 +1,5 @@
 <template>
-<div class="column is-3">    
+<div class="column blog-item is-half-tablet is-one-quarter-fullhd">    
     <!-- <div class="card animated fadeIn" v-show="loaded">
         <a :href="link" class="card-link">
         <h1 class="card-category" v-html="title"></h1>
@@ -9,9 +9,9 @@
             <div class="content" v-html="description"></div>
         </div>
     </div>     -->
-    <div class="card animated fadeIn" v-show="loaded">
+    <div class="card animated fadeIn" v-show="loaded && item.loaded">
         <a :href="item.link" class="card-link">
-          <h1 class="card-category" v-html="item.title"></h1>
+          <h1 class="card-category" :style="'color: ' + item.color">{{ item.title }}</h1>
         </a>
         <span style="font-size:12px;float:right;padding: 0px 25px 5px 0px;">{{ item.isoDate.split('T')[0] }}</span>
         <div class="card-content">
@@ -68,6 +68,7 @@ export default {
     justify-content: center;
     align-items: center;
     text-align: center;
+    transition: color 0.5s ease;
 }
 
 .card-subtitle {
