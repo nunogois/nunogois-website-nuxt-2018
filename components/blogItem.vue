@@ -13,7 +13,7 @@
         <a :href="item.link" class="card-link">
           <h1 class="card-category" :style="'color: ' + item.color">{{ item.title }}</h1>
         </a>
-        <span style="font-size:12px;float:right;padding: 0px 25px 5px 0px;">{{ item.isoDate.split('T')[0] }}</span>
+        <span style="font-size:12px;float:right;padding: 0px 25px 5px 0px;color: #a9a9a9">{{ item.isoDate.split('T')[0] }}</span>
         <div class="card-content">
             <div class="content" v-html="item.content"></div>
         </div>
