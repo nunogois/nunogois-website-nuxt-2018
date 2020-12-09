@@ -84,7 +84,7 @@ import item from '~/components/item.vue'
             {
                 var el = this;
                 this.loading = true;
-                this.$axios.post('https://cors-anywhere.herokuapp.com/https://nunogois-api.herokuapp.com/send_email', {
+                this.$axios.post('https://nunogois-api.herokuapp.com/send_email', {
                     contact_name: this.contact_name,
                     contact_email: this.contact_email,
                     contact_subject: this.contact_subject,

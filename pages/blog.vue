@@ -17,21 +17,24 @@
         <div style="padding-bottom:20px;">
             <input type="text" v-model="search" class="searchbox" placeholder="Looking for something in particular? Try typing here!"/>        
         </div>
-        <div class="columns is-multiline">                
+        <div class="columns is-multiline" v-if="loaded">                
           <blog-item v-for="item in s_items" :key="item.guid" :data-guid="item.guid" :item="item" />
         </div>
+        <h2 v-else style="text-align:center;color:#c1c1c1;font-size:32px;margin-top:30px;">Loading...</h2>
+        <!-- <div v-else class="columns is-desktop is-vcentered">
+          <font-awesome-icon  :icon="['fas', 'spinner']" class="fa-spin" style="font-size:56px;" />
+        </div> -->
     </div>
   </div>
 </template>
 
 <script>
 import blogItem from '~/components/blogItem.vue'
-var Parser = require('rss-parser')
-var parser = new Parser()
 
   export default {
     data () {
         return {
+          loaded: false,
           search: '',
           items: []
         }
@@ -61,31 +64,33 @@ var parser = new Parser()
         }
 
         var xhttp = new XMLHttpRequest()
-        xhttp.open("POST", "https://cors-anywhere.herokuapp.com/https://nunogois-api.herokuapp.com/colors", true)
+        xhttp.open("POST", "https://nunogois-api.herokuapp.com/colors", true)
         xhttp.setRequestHeader("Content-type", "application/json")
         xhttp.send(JSON.stringify({ auth: auth, colors: colors }))
       }
 
       var el = this
-      parser.parseURL('https://cors-anywhere.herokuapp.com/https://medium.com/feed/@yokiharo').then(function (res) {
+      // parser.parseURL('https://cors-anywhere.herokuapp.com/https://medium.com/feed/@yokiharo').then(function (res) {
+      el.$axios.get('https://nunogois-api.herokuapp.com/blog').then(function (res) {
         
-          res.items.forEach(function (item) {
+          res.data.items.forEach(function (item) {
             var content = item.content
             var i = item.content.indexOf('Continue reading on Medium »')
             content = content.substring(0, i-1) + ' target="__blank">Read More' + content.split('Continue reading on Medium »')[1]
             item.content = content
-            item.color = undefined
+            // item.color = undefined
             item.loaded = true
           })
 
-        el.items = res.items
+        el.items = res.data.items
+        el.loaded = true
 
-        el.$axios.get('https://cors-anywhere.herokuapp.com/https://nunogois-api.herokuapp.com/colors').then(function (colors) {
-          res.items.forEach(function (item) {
-            item.color = colors.data[item.guid]
-          })
-          el.$set(el.items, Object.assign([], res.items))
-        })
+        // el.$axios.get('https://nunogois-api.herokuapp.com/colors').then(function (colors) {
+        //   res.data.items.forEach(function (item) {
+        //     item.color = colors.data[item.guid]
+        //   })
+        //   el.$set(el.items, Object.assign([], res.data.items))
+        // })
       })
         // this.items = [ 
         //         {
