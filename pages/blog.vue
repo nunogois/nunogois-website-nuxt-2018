@@ -70,7 +70,7 @@ import blogItem from '~/components/blogItem.vue'
       }
 
       var el = this
-      // parser.parseURL('https://cors-anywhere.herokuapp.com/https://medium.com/feed/@yokiharo').then(function (res) {
+      // parser.parseURL('https://cors-anywhere.herokuapp.com/https://medium.com/feed/@nunogois-dev').then(function (res) {
       el.$axios.get('https://nunogois-api.herokuapp.com/blog').then(function (res) {
         
           res.data.items.forEach(function (item) {
