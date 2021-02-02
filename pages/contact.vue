@@ -3,12 +3,10 @@
     <h1 class="page_title">// CONTACT</h1>
     <div class="container" v-show="!email">        
         <div class="columns is-multiline col-center animated fadeIn" v-show="loaded">                
-            <div class="column is-4"><a href="javascript:;" @click="toggleEmail()"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #bd880c" :icon="['far', 'envelope']"/></a></div>
-            <div class="column is-4"><a href="https://github.com/nunogois" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #f5f5f5" :icon="['fab', 'github-alt']"/></a></div>            
-            <div class="column is-4"><a href="https://twitter.com/yokiharo" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #38A1F3" :icon="['fab', 'twitter']"/></a></div>
-            <div class="column is-4"><a href="https://www.linkedin.com/in/nuno-gois" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #0077B5" :icon="['fab', 'linkedin']"/></a></div>            
-            <div class="column is-4"><a href="https://www.instagram.com/yokiharo/" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #C13584" :icon="['fab', 'instagram']"/></a></div>
-            <div class="column is-4"><a href="https://discord.gg/rvT8TCm" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #7289da" :icon="['fab', 'discord']"/></a></div>
+            <div class="column is-3"><a href="javascript:;" @click="toggleEmail()"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #bd880c" :icon="['far', 'envelope']"/></a></div>
+            <div class="column is-3"><a href="https://github.com/nunogois" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #f5f5f5" :icon="['fab', 'github-alt']"/></a></div>            
+            <div class="column is-3"><a href="https://twitter.com/nunogois_dev" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #38A1F3" :icon="['fab', 'twitter']"/></a></div>
+            <div class="column is-3"><a href="https://www.linkedin.com/in/nuno-gois" target="_blank"><font-awesome-icon class="contact-icon" style="font-size:200px;color: #0077B5" :icon="['fab', 'linkedin']"/></a></div>
         </div>
         <h1 class="animated slideInUp" style="text-align:center;margin-top:30px;">© {{year}} - Nuno Góis</h1>
     </div>
