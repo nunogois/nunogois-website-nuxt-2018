@@ -19,6 +19,7 @@
             <router-link :to="'/skills'" class="navbar-item" @click.native="burger_close">SKILLS</router-link>
             <router-link :to="'/projects'" class="navbar-item" @click.native="burger_close">PROJECTS</router-link>
             <router-link :to="'/blog'" class="navbar-item" @click.native="burger_close">BLOG</router-link>
+            <a href="https://cv.nunogois.com" target="__blank" class="navbar-item" @click.native="burger_close">CV</a>
             <router-link :to="'/contact'" class="navbar-item" @click.native="burger_close">CONTACT</router-link>
         </div>
     </div>
