@@ -14,7 +14,7 @@
           </h3> -->         
           <h3 class="subtitle-nuxt-smaller">Experienced and driven {{ age }} years old Full-Stack Developer from Portugal. Passionate for the job, love putting skills to the test, facing challenges in a creative and perfectionist way. 
           Experienced with every step of developing and delivering cross-platform, modern and responsive software. Worked with several different technologies across the stack, always willing to learn more and improve skills.</h3>
-          <router-link :to="'/about'">READ MORE</router-link>
+          <NuxtLink to="/about">READ MORE</NuxtLink>
         </div>
       </div>
     </section>

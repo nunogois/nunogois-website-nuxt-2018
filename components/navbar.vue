@@ -14,13 +14,13 @@
 
     <div id="navbar_menu" class="navbar-menu animated fadeIn" :class="{'is-active': burger_open}">
         <div class="navbar-end">
-            <router-link :to="'/'" class="navbar-item" @click.native="burger_close">HOME</router-link>            
-            <router-link :to="'/about'" class="navbar-item" @click.native="burger_close">ABOUT ME</router-link>
-            <router-link :to="'/skills'" class="navbar-item" @click.native="burger_close">SKILLS</router-link>
-            <router-link :to="'/projects'" class="navbar-item" @click.native="burger_close">PROJECTS</router-link>
-            <router-link :to="'/blog'" class="navbar-item" @click.native="burger_close">BLOG</router-link>
+            <NuxtLink to="/" class="navbar-item" @click.native="burger_close">HOME</NuxtLink>            
+            <NuxtLink to="/about" class="navbar-item" @click.native="burger_close">ABOUT ME</NuxtLink>
+            <NuxtLink to="/skills" class="navbar-item" @click.native="burger_close">SKILLS</NuxtLink>
+            <NuxtLink to="/projects" class="navbar-item" @click.native="burger_close">PROJECTS</NuxtLink>
+            <NuxtLink to="/blog" class="navbar-item" @click.native="burger_close">BLOG</NuxtLink>
             <a href="https://cv.nunogois.com" target="__blank" class="navbar-item" @click.native="burger_close">CV</a>
-            <router-link :to="'/contact'" class="navbar-item" @click.native="burger_close">CONTACT</router-link>
+            <NuxtLink to="/contact" class="navbar-item" @click.native="burger_close">CONTACT</NuxtLink>
         </div>
     </div>
     

@@ -8,7 +8,7 @@
         <div class="columns is-multiline">                
             <item v-for="item in s_items" :key="item.id" :library="item.library" :text="item.text" :icon="item.icon" :title="item.title" :color="item.color" :content="item.content"/>
         </div>
-        <span v-show="s_items.length === 0">It seems I may not be familiar with that. Please <router-link :to="'/contact'" id="tellmeaboutit">tell me about it</router-link> so I can research it!</span>
+        <span v-show="s_items.length === 0">It seems I may not be familiar with that. Please <NuxtLink to="/contact" id="tellmeaboutit">tell me about it</NuxtLink> so I can research it!</span>
     </div>
   </div>
 </template>
