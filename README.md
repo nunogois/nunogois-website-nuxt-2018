@@ -1,10 +1,13 @@
-# nunogois
-
-Nuno Góis Portfolio (NuxtJS) - 2018
+# Nuno Góis Portfolio (NuxtJS) - 2018
 
 You can check it out here: https://www.nunogois.com
-I've decided to make my website NuxtJS open-source.
+
+I've decided to make my website NuxtJS project open-source.
+
 It is now a bit stale so expect revamp or a totally new website soon.
+
+It is hosted on Vercel as a static website (with `nuxt generate`) so that's why it is super fast!
+
 
 ## Build Setup
 
