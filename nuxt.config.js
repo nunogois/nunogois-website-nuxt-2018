@@ -48,11 +48,7 @@ module.exports = {
   modules: [
     '@nuxtjs/bulma',
     '@nuxtjs/axios',
-    '@nuxtjs/toast',
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-50755025-2',
-      dev: false
-    }]
+    '@nuxtjs/toast'
   ],
   build: {
     /*

@@ -1,6 +1,10 @@
 # nunogois
 
-Nuno Góis Portfolio (NuxtJS)
+Nuno Góis Portfolio (NuxtJS) - 2018
+
+You can check it out here: https://www.nunogois.com
+I've decided to make my website NuxtJS open-source.
+It is now a bit stale so expect revamp or a totally new website soon.
 
 ## Build Setup
 
