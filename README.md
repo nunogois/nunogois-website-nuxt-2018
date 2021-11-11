@@ -1,6 +1,8 @@
 # Nuno Góis Portfolio (NuxtJS) - 2018
 
-You can check it out here: https://www.nunogois.com
+You can still visit the website here: https://nuxt-2018.nunogois.com/
+
+You can check out the new repo here: https://github.com/nunogois/nunogois-website
 
 I've decided to make my website NuxtJS project open-source.
 
